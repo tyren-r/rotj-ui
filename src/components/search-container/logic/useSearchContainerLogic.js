@@ -1,7 +1,7 @@
 import { useState } from 'react';
 const axios = require('axios').default;
 
-function SearchContainerLogic() {
+function useSearchContainerLogic() {
     const [searchResults, setSearchResults] = useState();
 
     const getPersonInfo = async (searchParam) => {
@@ -19,18 +19,6 @@ function SearchContainerLogic() {
               person['films'] = names;
             },
           );
-          
-          // for(const link of person['films']) {
-          //   try {
-          //      await axios.get(`${link}`)
-          //     .then((response) => {
-          //       names.push(response.data['title'])
-          //     });
-          //   } catch (error) {
-          //     alert(error);
-          //   }
-          //   }
-          //   person['films'] = names;
           };
           setSearchResults(response.data['results']);
         });
@@ -42,4 +30,4 @@ function SearchContainerLogic() {
     return { searchResults, getPersonInfo };
   }
   
-  export default SearchContainerLogic;
+  export default useSearchContainerLogic;
