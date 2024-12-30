@@ -1,5 +1,5 @@
 import { useState } from 'react';
-const axios = require('axios').default;
+import axios from "axios";
 
 function useSearchContainerLogic() {
     const [searchResults, setSearchResults] = useState();
