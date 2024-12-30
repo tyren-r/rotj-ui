@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import '../styles/SearchBarStyles.css';
-import SearchBarLogic from '../logic/SearchBarLogic';
+import SearchBarLogic from '../logic/useSearchBarLogic';
 
 function SearchBar(props) {
   const {searchTerm, setSearchTerm} = SearchBarLogic();

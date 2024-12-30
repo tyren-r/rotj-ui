@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-function SearchResultsLogic() {
+function useSearchResultsLogic() {
     const [tableData, setTableData] = useState();
 
     return { tableData, setTableData };
   }
   
-  export default SearchResultsLogic;
+  export default useSearchResultsLogic;

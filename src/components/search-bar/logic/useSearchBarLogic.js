@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-function SearchBarLogic() {
+function useSearchBarLogic() {
     const [searchTerm, setSearchTerm] = useState();
 
     return { searchTerm, setSearchTerm };
   }
   
-  export default SearchBarLogic;
+  export default useSearchBarLogic;
