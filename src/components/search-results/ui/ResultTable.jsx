@@ -9,14 +9,13 @@ import Paper from '@mui/material/Paper';
 import '../styles/search-results-styles.css';
 
 function SearchResultsTable(props) {
-  const tableHeaderValues = ["Name", "Height", "Mass", "Hair Color", "Skin Color", "Birth Year"]
   return (
     <div className="table-container">
     <TableContainer component={Paper}>
       <Table sx={{backgroundColor:'grey'}}  aria-label="simple table">
         <TableHead>
           <TableRow key={1}>
-            {tableHeaderValues.map((headerValue)=>(
+            {Object.keys(props.data[0]).map((headerValue)=>(
               <TableCell sx={{color:'white'}} component="th" scope="row">{headerValue}</TableCell>
             ))}
           </TableRow>
@@ -24,9 +23,12 @@ function SearchResultsTable(props) {
         <TableBody>
               <TableRow
             >
-              {Object.values(props.data[0].properties).map((result)=> (
-                <TableCell sx={{color:'white'}}>{result}</TableCell>
-              ))}
+              {props.data.map((resultEntry)=> (
+                Object.values(resultEntry).map((resultValue)=>(
+                console.log(resultValue),
+                <TableCell sx={{color:'white'}}>{resultValue}</TableCell>
+                )
+              )))}
             </TableRow>
         </TableBody>
       </Table>

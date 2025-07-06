@@ -9,8 +9,7 @@ function useSearchContainerLogic() {
         // await axios.get(`https://swapi.tech/api/people/?name=${searchParam}`)
         await axios.get(`http://localhost:8000/${searchType}/${searchValue}`)
         .then( async (response) => {
-          // setSearchResults(response.data);
-          console.log(searchResults)
+          setSearchResults(response.data);
         });
       } catch (error) {
         alert(error);
