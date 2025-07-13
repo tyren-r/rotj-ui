@@ -14,22 +14,22 @@ function SearchResultsTable(props) {
     <TableContainer component={Paper}>
       <Table sx={{backgroundColor:'grey'}}  aria-label="simple table">
         <TableHead>
-          <TableRow key={1}>
+          <TableRow >
             {Object.keys(props.data[0]).map((headerValue)=>(
               <TableCell sx={{color:'white'}} component="th" scope="row">{headerValue}</TableCell>
             ))}
           </TableRow>
         </TableHead>
         <TableBody>
-              <TableRow
-            >
               {props.data.map((resultEntry)=> (
+                <TableRow>{
                 Object.values(resultEntry).map((resultValue)=>(
-                console.log(resultValue),
                 <TableCell sx={{color:'white'}}>{resultValue}</TableCell>
                 )
-              )))}
-            </TableRow>
+              )
+            }
+              </TableRow>
+            ))}
         </TableBody>
       </Table>
     </TableContainer>
