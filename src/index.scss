@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height:100%;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  overflow: hidden
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  height: 100% !important;
+  width: 100%;
+}
+
+#title {
+	padding-top:30vh;
+	left: 0;
+	right: 0;
+	color: #FFF;
+	font-weight: 300;
+	font-size: 50px;
+	letter-spacing: 10px;
+	padding-left: 10px;
+	text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
+  }
+
+/* Keyframes */
+@keyframes parallax {
+	from {
+		transform: translateY(0)
+	}
+	to {
+		transform: translateY(-100vh);
+	}
+}
+@function multiple-box-shadows($stars, $size, $color){
+	$box-shadow: random(100)+'vw ' + random(100)+'vh ' + $color;
+	@for $i from 1 through $stars {
+		 $box-shadow: $box-shadow + ', ' + random(160)+'vw ' + random(160)+'vh ' + $color;
+	}
+	@return unquote($box-shadow);
+}
+@mixin parallax-layer($stars, $size: 1px, $timer: 25s, $color: white, $easing: linear){
+	$shadows: multiple-box-shadows($stars, $size, $color);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: $size;
+	height: $size;
+	background: transparent;
+	pointer-events: none;
+	box-shadow: $shadows;
+	animation: parallax $timer $easing infinite;
+  border-radius: 50%;
+	&:after {
+		content: " ";
+		position: absolute;
+		width: $size;
+		height: $size;
+		top: 100vh;
+		box-shadow: $shadows;
+    border-radius: 50%;
+	}
+}
+#stars {
+	@include parallax-layer(300, 1px, 60s, white);
+}
+#stars2 {
+	@include parallax-layer(300, 2px, 90s, white);
+}
+#stars3 {
+	@include parallax-layer(150, 3px, 130s, white);
+}
