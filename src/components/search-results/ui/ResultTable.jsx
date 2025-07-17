@@ -11,8 +11,8 @@ import '../styles/search-results-styles.css';
 function SearchResultsTable(props) {
   return (
     <div className="table-container">
-    <TableContainer component={Paper}>
-      <Table sx={{backgroundColor:'grey'}}  aria-label="simple table">
+    <TableContainer >
+      <Table sx={{background:'transparent'}}  aria-label="simple table">
         <TableHead>
           <TableRow >
             {Object.keys(props.data[0]).map((headerValue)=>(

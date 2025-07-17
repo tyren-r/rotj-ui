@@ -10,7 +10,7 @@ function SearchContainer() {
   const resultsTable = useMemo(()=><SearchResultsTable data={searchResults} />,[searchResults])
   return (
     <div className="container">
-      <h1 id='title'>Star Wars Searcher</h1>
+      <h1 id='title'>SWAPI</h1>
       <SearchBar searchMethod={search_the_api} />
      { searchResults ? (resultsTable) : (null) }
     </div>
