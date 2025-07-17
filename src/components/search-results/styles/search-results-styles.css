@@ -1,4 +1,7 @@
 .table-container{
     margin-top: 5vh;;
-    width:60vw;
+    width:80vw;
+    overflow: scroll;
+    height:100vh
+
 }
