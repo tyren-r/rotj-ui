@@ -2,6 +2,10 @@
     width:80vw;
     color:white !important;
 }
+#select{
+    height: 50px;
+    color: white !important;
+}
 
 .search-button{
     height:50px;
