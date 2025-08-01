@@ -11,6 +11,9 @@ function useSearchContainerLogic() {
         searchValue ? (url=`http://localhost:8000/${searchType}/${searchValue}`) : (url=`http://localhost:8000/${searchType}`)
         await axios.get(url)
         .then( async (response) => {
+          response.data.forEach((searchResultItem)=>(
+             searchResultItem.image= `http://localhost:8000/images/${searchType}/${searchResultItem.name}.png`
+          ))
           setSearchResults(response.data);
         });
       } catch (error) {

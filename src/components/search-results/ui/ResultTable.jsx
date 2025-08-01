@@ -23,8 +23,8 @@ function SearchResultsTable(props) {
         <TableBody>
               {props.data.map((resultEntry)=> (
                 <TableRow>{
-                Object.values(resultEntry).map((resultValue)=>(
-                <TableCell sx={{color:'white'}}>{resultValue}</TableCell>
+                Object.entries(resultEntry).map((result)=>(
+                <TableCell sx={{color:'white'}}>{result[0] !== 'image'?result[1]:<img src={result[1]}/>}</TableCell>
                 )
               )
             }
