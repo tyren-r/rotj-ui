@@ -1,7 +1,11 @@
 .table-container{
-    margin-top: 5vh;;
+    margin-top: 5vh;
     width:98vw;
     overflow: scroll;
     height:100vh
 
+}
+
+#table-cell{
+    color: white;
 }

@@ -1,36 +1,17 @@
 import * as React from 'react';
 import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import '../styles/search-results-styles.css';
+import ResultEntry from './ResultEntry';
 
 function SearchResultsTable(props) {
   return (
     <div className="table-container">
     <TableContainer >
       <Table sx={{background:'transparent'}}  aria-label="simple table">
-        <TableHead>
-          <TableRow >
-            {Object.keys(props.data[0]).map((headerValue)=>(
-              <TableCell sx={{color:'white'}} component="th" scope="row">{headerValue}</TableCell>
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-              {props.data.map((resultEntry)=> (
-                <TableRow>{
-                Object.entries(resultEntry).map((result)=>(
-                <TableCell sx={{color:'white'}}>{result[0] !== 'image'?result[1]:<img src={result[1]}/>}</TableCell>
-                )
-              )
-            }
-              </TableRow>
-            ))}
-        </TableBody>
+        {props.data.map((resultEntry)=>(
+          <ResultEntry resultEntry={resultEntry}/>
+        ))}
       </Table>
     </TableContainer>
     </div>
