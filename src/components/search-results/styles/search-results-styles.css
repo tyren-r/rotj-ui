@@ -6,6 +6,25 @@
 
 }
 
-#table-cell{
+#result-entry-card{
+    background-color:#222222;
+    color:white;
+    display:flex;
+    border: 1px solid white;
+}
+#result-entry-image{
+    height: 300px;
+    width:300px;
+    min-height:300px;
+    min-width:300px;
+    max-width:300px;
+    max-height:300px;
+    background-size:cover;
+}
+
+.table-cell{
     color: white;
+    padding: 0px !important;
+    width: 100px !important;
+    max-width: 100px !important;
 }
