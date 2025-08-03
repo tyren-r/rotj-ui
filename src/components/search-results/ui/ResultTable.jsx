@@ -8,7 +8,7 @@ function SearchResultsTable(props) {
   return (
     <div className="table-container">
     <TableContainer >
-      <Table sx={{background:'transparent'}}  aria-label="simple table">
+      <Table>
         {props.data.map((resultEntry)=>(
           <ResultEntry resultEntry={resultEntry}/>
         ))}
