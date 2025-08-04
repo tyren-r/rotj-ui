@@ -18,12 +18,12 @@ module.exports = {
     },
     plugins: ['react'],
     rules: {
-    "react/function-component-definition": [
-      "error", // Or "warn", depending on desired severity
-      {
-        namedComponents: [ "arrow-function"], // prefer arrow components
-        unnamedComponents: "arrow-function", 
-      },
-    ],
-  },
-}
+        'react/function-component-definition': [
+            'error', // Or "warn", depending on desired severity
+            {
+                namedComponents: ['arrow-function'], // prefer arrow components
+                unnamedComponents: 'arrow-function',
+            },
+        ],
+    },
+};
