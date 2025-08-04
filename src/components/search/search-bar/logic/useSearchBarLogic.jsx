@@ -7,23 +7,33 @@ function useSearchBarLogic() {
     const [searchType, setSearchType] = useState('characters');
     const { setSearchResults } = useSearchResultsContext();
 
+    const createDynamicURL = () => {
+        let dynamicURL = '';
+        if (searchTerm) {
+            dynamicURL = `http://localhost:8000/${searchType}/${searchTerm}`;
+        } else {
+            dynamicURL = `http://localhost:8000/${searchType}`;
+        }
+        return dynamicURL;
+    };
+    const addImageFieldsToResponseData = (responseData) => {
+        const ResponseDataWithImageURLs = [];
+        responseData.forEach((searchResultItem) => {
+            ResponseDataWithImageURLs.push({
+                ...searchResultItem,
+                image: `http://localhost:8000/images/${searchType}/${searchResultItem.name}.png`,
+            });
+        });
+        return ResponseDataWithImageURLs;
+    };
     const searchTheApi = async () => {
         try {
-            let url = '';
-            if (searchTerm) {
-                url = `http://localhost:8000/${searchType}/${searchTerm}`;
-            } else {
-                url = `http://localhost:8000/${searchType}`;
-            }
+            const url = createDynamicURL();
             await axios.get(url).then(async (response) => {
-                const newResponseData = [];
-                response.data.forEach((searchResultItem) => {
-                    newResponseData.push({
-                        ...searchResultItem,
-                        image: `http://localhost:8000/images/${searchType}/${searchResultItem.name}.png`,
-                    });
-                });
-                setSearchResults(newResponseData);
+                const searchResultsWithImageURLs = addImageFieldsToResponseData(
+                    response.data
+                );
+                setSearchResults(searchResultsWithImageURLs);
             });
         } catch (error) {
             alert(error);
