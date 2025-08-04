@@ -1,9 +1,8 @@
-.table-container{
+#table-container{
     margin-top: 5vh;
     width:98vw;
     overflow: scroll;
     height:100vh
-
 }
 
 #result-entry-card{
@@ -25,6 +24,5 @@
 .table-cell{
     color: white;
     padding: 0px !important;
-    width: 100px !important;
-    max-width: 100px !important;
+    width: 100px ;
 }

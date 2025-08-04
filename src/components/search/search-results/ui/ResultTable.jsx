@@ -8,7 +8,7 @@ const SearchResultsTable = () => {
     const { searchResults } = useSearchResultsContext();
     return (
         searchResults && (
-            <TableContainer className="table-container">
+            <TableContainer id="table-container">
                 <Table>
                     {searchResults.map((resultEntry) => (
                         <ResultEntry resultEntry={resultEntry} />
