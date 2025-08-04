@@ -1,14 +1,17 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import axios from 'axios';
+import { searchResultsContext } from '../../../../App';
 
-function useSearchContainerLogic() {
-    const [searchResults, setSearchResults] = useState();
+function useSearchBarLogic() {
+    const [searchTerm, setSearchTerm] = useState();
+    const [searchType, setSearchType] = useState('characters');
+    const { setSearchResults } = useContext(searchResultsContext);
 
-    const searchTheApi = async (searchType, searchValue) => {
+    const searchTheApi = async () => {
         try {
             let url = '';
-            if (searchValue) {
-                url = `http://localhost:8000/${searchType}/${searchValue}`;
+            if (searchTerm) {
+                url = `http://localhost:8000/${searchType}/${searchTerm}`;
             } else {
                 url = `http://localhost:8000/${searchType}`;
             }
@@ -27,7 +30,13 @@ function useSearchContainerLogic() {
         }
     };
 
-    return { searchResults, searchTheApi };
+    return {
+        searchTerm,
+        searchType,
+        setSearchTerm,
+        setSearchType,
+        searchTheApi,
+    };
 }
 
-export default useSearchContainerLogic;
+export default useSearchBarLogic;

@@ -6,11 +6,16 @@ import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import '../styles/SearchBarStyles.css';
 import { Select } from '@mui/material';
-import SearchBarLogic from '../logic/useSearchBarLogic';
+import useSearchBarLogic from '../logic/useSearchBarLogic';
 
-const SearchBar = ({ searchMethod }) => {
-    const { searchTerm, searchType, setSearchTerm, setSearchType } =
-        SearchBarLogic();
+const SearchBar = () => {
+    const {
+        searchTerm,
+        searchType,
+        setSearchTerm,
+        setSearchType,
+        searchTheApi,
+    } = useSearchBarLogic();
     return (
         <Box component="form" noValidate autoComplete="off">
             <TextField
@@ -46,7 +51,7 @@ const SearchBar = ({ searchMethod }) => {
             <Button
                 className="search-button"
                 variant="contained"
-                onClick={() => searchMethod(searchType, searchTerm)}
+                onClick={() => searchTheApi(searchType, searchTerm)}
             >
                 Search
             </Button>
