@@ -9,32 +9,45 @@ import TableRow from '@mui/material/TableRow';
 import '../styles/search-results-styles.css';
 
 const ResultEntry = (resultEntry) => {
-    const { id, name,image,description, ...resultEntryWithoutCommonFields } = resultEntry.resultEntry;
-    return(
-          <Card variant="outlined" id='result-entry-card'>
-      <CardMedia
-        id='result-entry-image'
-        image={resultEntry.resultEntry.image}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {resultEntry.resultEntry.name}
-        </Typography>
-        <Typography gutterBottom variant="body2" >
-          {resultEntry.resultEntry.description}
-        </Typography>
-                    <Table >
-                        {Object.entries(resultEntryWithoutCommonFields).map((resultKeyValuePair)=>(
-            <TableRow >
-                <TableCell className='table-cell'><Typography variant="body2" >{resultKeyValuePair[0].replaceAll('_', ' ')}</Typography></TableCell>
-                <TableCell className='table-cell'><Typography variant="body2" >{resultKeyValuePair[1]}</Typography></TableCell>
-            </TableRow>
-                        ))
-                    }
-    </Table>
-      </CardContent>
-    </Card>
-);
-}
+    const { id, name, image, description, ...resultEntryWithoutCommonFields } =
+        resultEntry.resultEntry;
+    return (
+        <Card variant="outlined" id="result-entry-card">
+            <CardMedia
+                id="result-entry-image"
+                image={resultEntry.resultEntry.image}
+            />
+            <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                    {resultEntry.resultEntry.name}
+                </Typography>
+                <Typography gutterBottom variant="body2">
+                    {resultEntry.resultEntry.description}
+                </Typography>
+                <Table>
+                    {Object.entries(resultEntryWithoutCommonFields).map(
+                        (resultKeyValuePair) => (
+                            <TableRow>
+                                <TableCell className="table-cell">
+                                    <Typography variant="body2">
+                                        {resultKeyValuePair[0].replaceAll(
+                                            '_',
+                                            ' '
+                                        )}
+                                    </Typography>
+                                </TableCell>
+                                <TableCell className="table-cell">
+                                    <Typography variant="body2">
+                                        {resultKeyValuePair[1]}
+                                    </Typography>
+                                </TableCell>
+                            </TableRow>
+                        )
+                    )}
+                </Table>
+            </CardContent>
+        </Card>
+    );
+};
 
 export default ResultEntry;

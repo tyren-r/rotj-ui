@@ -4,6 +4,6 @@ function useSearchResultsLogic() {
     const [tableData, setTableData] = useState();
 
     return { tableData, setTableData };
-  }
-  
-  export default useSearchResultsLogic;
+}
+
+export default useSearchResultsLogic;
