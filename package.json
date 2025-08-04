@@ -23,8 +23,8 @@
     "start": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "lint": "eslint .",
-    "lint:fix": "eslint -fix ."
+    "lint": "eslint src/**/*.jsx",
+    "lint:fix": "eslint --fix src/**/*.jsx"
   },
   "eslintConfig": {
     "extends": [
