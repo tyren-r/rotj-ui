@@ -17,5 +17,13 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: ['react'],
-    rules: {},
+    rules: {
+    "react/function-component-definition": [
+      "error", // Or "warn", depending on desired severity
+      {
+        namedComponents: [ "arrow-function"], // prefer arrow components
+        unnamedComponents: "arrow-function", 
+      },
+    ],
+  },
 }
