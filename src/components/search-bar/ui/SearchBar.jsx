@@ -8,7 +8,7 @@ import '../styles/SearchBarStyles.css';
 import { Select } from '@mui/material';
 import SearchBarLogic from '../logic/useSearchBarLogic';
 
-const SearchBar = (props) => {
+const SearchBar = ({ searchMethod }) => {
     const { searchTerm, searchType, setSearchTerm, setSearchType } =
         SearchBarLogic();
     return (
@@ -46,7 +46,7 @@ const SearchBar = (props) => {
             <Button
                 className="search-button"
                 variant="contained"
-                onClick={() => props.searchMethod(searchType, searchTerm)}
+                onClick={() => searchMethod(searchType, searchTerm)}
             >
                 Search
             </Button>

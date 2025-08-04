@@ -7,21 +7,18 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import '../styles/search-results-styles.css';
 
-const ResultEntry = (resultEntry) => {
+const ResultEntry = ({ resultEntry }) => {
     const { id, name, image, description, ...resultEntryWithoutCommonFields } =
-        resultEntry.resultEntry;
+        resultEntry;
     return (
         <Card variant="outlined" id="result-entry-card">
-            <CardMedia
-                id="result-entry-image"
-                image={resultEntry.resultEntry.image}
-            />
+            <CardMedia id="result-entry-image" image={resultEntry.image} />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    {resultEntry.resultEntry.name}
+                    {resultEntry.name}
                 </Typography>
                 <Typography gutterBottom variant="body2">
-                    {resultEntry.resultEntry.description}
+                    {resultEntry.description}
                 </Typography>
                 <Table>
                     {Object.entries(resultEntryWithoutCommonFields).map(
