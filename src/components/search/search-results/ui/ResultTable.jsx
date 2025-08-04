@@ -1,12 +1,11 @@
-import { useContext } from 'react';
 import Table from '@mui/material/Table';
 import TableContainer from '@mui/material/TableContainer';
-import { searchResultsContext } from '../../../../App';
+import { useSearchResultsContext } from '../../../../context';
 import '../styles/search-results-styles.css';
 import ResultEntry from './ResultEntry';
 
 const SearchResultsTable = () => {
-    const { searchResults } = useContext(searchResultsContext);
+    const { searchResults } = useSearchResultsContext();
     return (
         searchResults && (
             <TableContainer className="table-container">

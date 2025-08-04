@@ -1,11 +1,11 @@
-import { useMemo, useContext } from 'react';
-import { searchResultsContext } from '../../../../App';
+import { useMemo } from 'react';
+import { useSearchResultsContext } from '../../../../context';
 import SearchBar from '../../../search/search-bar/ui/SearchBar';
 import SearchResultsTable from '../../../search/search-results/ui/ResultTable';
 import '../styles/search-page-styles.css';
 
 const SearchPage = () => {
-    const { searchResults } = useContext(searchResultsContext);
+    const { searchResults } = useSearchResultsContext();
     const resultsTable = useMemo(() => <SearchResultsTable />, [searchResults]);
 
     return (

@@ -1,11 +1,11 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
-import { searchResultsContext } from '../../../../App';
+import { useSearchResultsContext } from '../../../../context';
 
 function useSearchBarLogic() {
     const [searchTerm, setSearchTerm] = useState();
     const [searchType, setSearchType] = useState('characters');
-    const { setSearchResults } = useContext(searchResultsContext);
+    const { setSearchResults } = useSearchResultsContext();
 
     const searchTheApi = async () => {
         try {
