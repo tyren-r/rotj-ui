@@ -4,26 +4,30 @@ import axios from 'axios';
 function useSearchContainerLogic() {
     const [searchResults, setSearchResults] = useState();
 
-    const search_the_api = async (searchType, searchValue) => {
+    const searchTheApi = async (searchType, searchValue) => {
         try {
             let url = '';
-            // await axios.get(`https://swapi.tech/api/people/?name=${searchParam}`)
-            searchValue
-                ? (url = `http://localhost:8000/${searchType}/${searchValue}`)
-                : (url = `http://localhost:8000/${searchType}`);
+            if (searchValue) {
+                url = `http://localhost:8000/${searchType}/${searchValue}`;
+            } else {
+                url = `http://localhost:8000/${searchType}`;
+            }
             await axios.get(url).then(async (response) => {
-                response.data.forEach(
-                    (searchResultItem) =>
-                        (searchResultItem.image = `http://localhost:8000/images/${searchType}/${searchResultItem.name}.png`)
-                );
-                setSearchResults(response.data);
+                const newResponseData = [];
+                response.data.forEach((searchResultItem) => {
+                    newResponseData.push({
+                        ...searchResultItem,
+                        image: `http://localhost:8000/images/${searchType}/${searchResultItem.name}.png`,
+                    });
+                });
+                setSearchResults(newResponseData);
             });
         } catch (error) {
             alert(error);
         }
     };
 
-    return { searchResults, search_the_api };
+    return { searchResults, searchTheApi };
 }
 
 export default useSearchContainerLogic;

@@ -3,12 +3,12 @@ import TableContainer from '@mui/material/TableContainer';
 import '../styles/search-results-styles.css';
 import ResultEntry from './ResultEntry';
 
-const SearchResultsTable = (props) => {
+const SearchResultsTable = ({ data }) => {
     return (
         <div className="table-container">
             <TableContainer>
                 <Table>
-                    {props.data.map((resultEntry) => (
+                    {data.map((resultEntry) => (
                         <ResultEntry resultEntry={resultEntry} />
                     ))}
                 </Table>

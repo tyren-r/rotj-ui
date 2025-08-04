@@ -6,7 +6,7 @@ import SearchContainerLogic from '../logic/useSearchContainerLogic';
 import '../styles/search-container-styles.css';
 
 const SearchContainer = () => {
-    const { searchResults, search_the_api } = SearchContainerLogic();
+    const { searchResults, searchTheApi } = SearchContainerLogic();
     const resultsTable = useMemo(
         () => <SearchResultsTable data={searchResults} />,
         [searchResults]
@@ -14,7 +14,7 @@ const SearchContainer = () => {
     return (
         <div className="container">
             <h1 id="title">SWAPI</h1>
-            <SearchBar searchMethod={search_the_api} />
+            <SearchBar searchMethod={searchTheApi} />
             {searchResults ? resultsTable : null}
         </div>
     );
