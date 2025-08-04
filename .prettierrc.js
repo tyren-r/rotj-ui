@@ -1,4 +1,4 @@
-// prettier.config.js, .prettierrc.js, prettier.config.mjs, or .prettierrc.mjs
+// prettier.config.js, .prettierrc.js, prettier.config.cjs, or .prettierrc.cjs
 
 /**
  * @see https://prettier.io/docs/configuration
@@ -11,4 +11,4 @@ const config = {
   singleQuote: true,
 };
 
-export default config;
+module.exports = config;
