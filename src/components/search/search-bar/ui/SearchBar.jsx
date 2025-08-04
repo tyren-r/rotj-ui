@@ -26,16 +26,14 @@ const SearchBar = () => {
                         boxShadow: '1px 1px 10px #fff, 1px 1px 10px #ccc',
                     },
                 }}
-                id="outlined-basic"
-                className="search-bar"
+                id="search-bar"
                 label="May the force be with you..."
                 onChange={(e) => setSearchTerm(e.target.value)}
                 variant="outlined"
             />
             <FormControl>
-                <InputLabel style={{ color: 'white' }}>SearchType</InputLabel>
+                <InputLabel sx={{ color: 'white' }}>SearchType</InputLabel>
                 <Select
-                    labelId="select-label"
                     id="select"
                     value={searchType}
                     label="Search Type"
@@ -49,7 +47,7 @@ const SearchBar = () => {
                 </Select>
             </FormControl>
             <Button
-                className="search-button"
+                id="search-button"
                 variant="contained"
                 onClick={() => searchTheApi(searchType, searchTerm)}
             >
