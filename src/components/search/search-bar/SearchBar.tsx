@@ -6,7 +6,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import '../styles/SearchBarStyles.css';
 import { Select } from '@mui/material';
-import useSearchBarLogic from '../logic/useSearchBarLogic';
+import useSearchBarLogic from './useSearchBarLogic';
 
 const SearchBar = () => {
     const {

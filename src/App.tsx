@@ -1,4 +1,4 @@
-import SearchPage from './components/pages/search-page/ui/SearchPage';
+import SearchPage from './components/pages/search-page/SearchPage';
 import { SearchResultsContextProvider } from './context';
 
 const App = () => {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { useSearchResultsContext } from '../../../../context';
+import { useSearchResultsContext } from '../../../context';
 
 function useSearchBarLogic() {
     const [searchTerm, setSearchTerm] = useState();
