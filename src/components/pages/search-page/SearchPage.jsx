@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
-import { useSearchResultsContext } from '../../../../context';
+import { useSearchResultsContext } from '../../../context';
 import SearchBar from '../../../search/search-bar/ui/SearchBar';
-import SearchResultsTable from '../../../search/search-results/ui/ResultTable';
+import SearchResultsTable from '../../search/search-results/ResultTable';
 import '../styles/search-page-styles.css';
 
 const SearchPage = () => {
