@@ -1,15 +1,15 @@
-import SearchContainer from "./components/search-container/ui/SearchContainer";
+import SearchPage from './components/pages/search-page/ui/SearchPage';
+import { SearchResultsContextProvider } from './context';
 
-function App() {
-
-  return (
-    <>
-      <div id="stars"/>
-      <div id="stars2"/>
-      <div id="stars3"/>
-      <SearchContainer/>
-    </>
-  );
-}
+const App = () => {
+    return (
+        <SearchResultsContextProvider>
+            <div id="stars" />
+            <div id="stars2" />
+            <div id="stars3" />
+            <SearchPage />
+        </SearchResultsContextProvider>
+    );
+};
 
 export default App;
