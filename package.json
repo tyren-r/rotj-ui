@@ -23,7 +23,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix src/**/*.jsx"
+    "lint:fix": "eslint --fix ."
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
