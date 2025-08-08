@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Table from '@mui/material/Table';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
-import '../styles/search-results-styles.css';
+import './search-results-styles.css';
 
 const ResultEntry = ({ resultEntry }) => {
     const { id, name, image, description, ...resultEntryWithoutCommonFields } =

@@ -4,7 +4,7 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
-import '../styles/SearchBarStyles.css';
+import './SearchBarStyles.css';
 import { Select } from '@mui/material';
 import useSearchBarLogic from './useSearchBarLogic';
 
