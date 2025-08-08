@@ -17,8 +17,10 @@ function useSearchBarLogic() {
         }
         return dynamicURL;
     };
-    const addImageFieldsToResponseData = (responseData:APIResponseObject[]) => {
-        const ResponseDataWithImageURLs:APIResponseObject[] = [];
+    const addImageFieldsToResponseData = (
+        responseData: APIResponseObject[]
+    ) => {
+        const ResponseDataWithImageURLs: APIResponseObject[] = [];
         responseData.forEach((searchResultItem) => {
             ResponseDataWithImageURLs.push({
                 ...searchResultItem,

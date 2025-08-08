@@ -8,10 +8,10 @@ import TableRow from '@mui/material/TableRow';
 import type { ResultEntryProps } from '../../../../types';
 import './search-results-styles.css';
 
-const ResultEntry:React.FC<ResultEntryProps> = ({resultEntry}) => {
+const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
     const { id, name, image, description, ...resultEntryWithoutCommonFields } =
         resultEntry;
-    
+
     return (
         <Card variant="outlined" id="result-entry-card">
             <CardMedia id="result-entry-image" image={resultEntry.image} />
@@ -24,14 +24,11 @@ const ResultEntry:React.FC<ResultEntryProps> = ({resultEntry}) => {
                 </Typography>
                 <Table>
                     {Object.entries(resultEntryWithoutCommonFields).map(
-                        ([key,value]) => (
+                        ([key, value]) => (
                             <TableRow>
                                 <TableCell className="table-cell">
                                     <Typography variant="body2">
-                                        {key.replaceAll(
-                                            '_',
-                                            ' '
-                                        )}
+                                        {key.replaceAll('_', ' ')}
                                     </Typography>
                                 </TableCell>
                                 <TableCell className="table-cell">

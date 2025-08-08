@@ -11,7 +11,7 @@ const SearchResultsTable = () => {
         searchResults && (
             <TableContainer id="table-container">
                 <Table>
-                    {searchResults.map((resultEntry:APIResponseObject) => (
+                    {searchResults.map((resultEntry: APIResponseObject) => (
                         <ResultEntry resultEntry={resultEntry} />
                     ))}
                 </Table>

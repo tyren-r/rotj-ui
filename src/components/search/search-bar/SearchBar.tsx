@@ -9,12 +9,8 @@ import { Select } from '@mui/material';
 import useSearchBarLogic from './useSearchBarLogic';
 
 const SearchBar = () => {
-    const {
-        searchType,
-        setSearchTerm,
-        setSearchType,
-        searchTheApi,
-    } = useSearchBarLogic();
+    const { searchType, setSearchTerm, setSearchType, searchTheApi } =
+        useSearchBarLogic();
     return (
         <Box component="form" noValidate autoComplete="off">
             <TextField
