@@ -1,12 +1,13 @@
 import { useState, useMemo, createContext, useContext } from 'react';
+import type { functionalComponentProps } from '../types.d.ts';
 
-const SearchResultsContext = createContext(null);
-export const SearchResultsContextProvider = ({ children }) => {
+const SearchResultsContext = createContext({});
+export const SearchResultsContextProvider:React.FC<functionalComponentProps> = ({ children }) => {
     const [searchResults, setSearchResults] = useState();
     const contextProviderValue = useMemo(() => ({
         searchResults,
         setSearchResults,
-    }));
+    }), [searchResults]);
     return (
         <SearchResultsContext.Provider value={contextProviderValue}>
             {children}
