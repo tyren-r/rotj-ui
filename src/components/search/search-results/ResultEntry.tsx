@@ -5,11 +5,13 @@ import Typography from '@mui/material/Typography';
 import Table from '@mui/material/Table';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
+import type { ResultEntryProps } from '../../../../types';
 import './search-results-styles.css';
 
-const ResultEntry = ({ resultEntry }) => {
+const ResultEntry:React.FC<ResultEntryProps> = ({resultEntry}) => {
     const { id, name, image, description, ...resultEntryWithoutCommonFields } =
         resultEntry;
+    
     return (
         <Card variant="outlined" id="result-entry-card">
             <CardMedia id="result-entry-image" image={resultEntry.image} />
@@ -22,11 +24,11 @@ const ResultEntry = ({ resultEntry }) => {
                 </Typography>
                 <Table>
                     {Object.entries(resultEntryWithoutCommonFields).map(
-                        (resultKeyValuePair) => (
+                        ([key,value]) => (
                             <TableRow>
                                 <TableCell className="table-cell">
                                     <Typography variant="body2">
-                                        {resultKeyValuePair[0].replaceAll(
+                                        {key.replaceAll(
                                             '_',
                                             ' '
                                         )}
@@ -34,7 +36,9 @@ const ResultEntry = ({ resultEntry }) => {
                                 </TableCell>
                                 <TableCell className="table-cell">
                                     <Typography variant="body2">
-                                        {resultKeyValuePair[1]}
+                                        {/* 
+// @ts-ignore */}
+                                        {value}
                                     </Typography>
                                 </TableCell>
                             </TableRow>

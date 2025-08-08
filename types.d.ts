@@ -3,6 +3,17 @@ export interface FunctionalComponentProps{
 }
 
 export interface SearchResultsContext {
-      searchResults: Array;
-      setSearchResults: (newSearchResults: Array) => void;
+      searchResults: APIResponseObject[];
+      setSearchResults: (newSearchResults: APIResponseObject[]) => void;
     }
+
+export interface APIResponseObject{
+  id:number;
+  name:string;
+  description:string;
+  image:string;
+}
+
+export interface ResultEntryProps{
+  resultEntry:APIResponseObject
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useSearchResultsContext } from '../../../context';
+import type { APIResponseObject } from '../../../../types';
 
 function useSearchBarLogic() {
     const [searchTerm, setSearchTerm] = useState<string>();
@@ -16,11 +17,12 @@ function useSearchBarLogic() {
         }
         return dynamicURL;
     };
-    const addImageFieldsToResponseData = (responseData) => {
-        const ResponseDataWithImageURLs = [];
+    const addImageFieldsToResponseData = (responseData:APIResponseObject[]) => {
+        const ResponseDataWithImageURLs:APIResponseObject[] = [];
         responseData.forEach((searchResultItem) => {
             ResponseDataWithImageURLs.push({
                 ...searchResultItem,
+                // @ts-ignore
                 image: `http://localhost:8000/images/${searchType}/${searchResultItem.name}.png`,
             });
         });
