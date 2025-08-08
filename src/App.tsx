@@ -1,5 +1,5 @@
-import SearchPage from './components/pages/search-page/ui/SearchPage';
-import { SearchResultsContextProvider } from './context';
+import SearchPage from './components/pages/search-page/SearchPage';
+import SearchResultsContextProvider from './SearchResultsContextProvider';
 
 const App = () => {
     return (
