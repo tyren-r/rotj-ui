@@ -1,7 +1,8 @@
 import { useState, useMemo, createContext, useContext } from 'react';
-import type { functionalComponentProps } from '../types.d.ts';
+import type { functionalComponentProps, searchResultsContext } from '../types.d.ts';
 
-const SearchResultsContext = createContext({});
+// TODO must be a better way to set this initial type value then a made up function
+const SearchResultsContext = createContext<searchResultsContext >({searchResults:[],setSearchResults(newSearchResults) {},});
 export const SearchResultsContextProvider:React.FC<functionalComponentProps> = ({ children }) => {
     const [searchResults, setSearchResults] = useState();
     const contextProviderValue = useMemo(() => ({
