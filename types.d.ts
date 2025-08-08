@@ -3,8 +3,8 @@ export interface FunctionalComponentProps {
 }
 
 export interface SearchResultsContextType {
-    searchResults: APIResponseObject[];
-    setSearchResults: (newSearchResults: APIResponseObject[]) => void;
+    searchResults: APIResponseObject[] | undefined;
+    setSearchResults: SetStateAction<APIResponseObject[] | undefined>;
 }
 
 export interface APIResponseObject {
