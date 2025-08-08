@@ -5,11 +5,14 @@ import Typography from '@mui/material/Typography';
 import Table from '@mui/material/Table';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
-import '../styles/search-results-styles.css';
+import type { ResultEntryProps } from '../../../../types';
+import './search-results-styles.css';
 
-const ResultEntry = ({ resultEntry }) => {
+const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { id, name, image, description, ...resultEntryWithoutCommonFields } =
         resultEntry;
+
     return (
         <Card variant="outlined" id="result-entry-card">
             <CardMedia id="result-entry-image" image={resultEntry.image} />
@@ -22,19 +25,18 @@ const ResultEntry = ({ resultEntry }) => {
                 </Typography>
                 <Table>
                     {Object.entries(resultEntryWithoutCommonFields).map(
-                        (resultKeyValuePair) => (
+                        ([key, value]) => (
                             <TableRow>
                                 <TableCell className="table-cell">
                                     <Typography variant="body2">
-                                        {resultKeyValuePair[0].replaceAll(
-                                            '_',
-                                            ' '
-                                        )}
+                                        {key.replaceAll('_', ' ')}
                                     </Typography>
                                 </TableCell>
                                 <TableCell className="table-cell">
                                     <Typography variant="body2">
-                                        {resultKeyValuePair[1]}
+                                        {/* 
+// @ts-expect-error The value variable is a string, but unsure how to properly get ts to recognize TODO*/}
+                                        {value}
                                     </Typography>
                                 </TableCell>
                             </TableRow>

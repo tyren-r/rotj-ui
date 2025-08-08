@@ -4,18 +4,13 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
-import '../styles/SearchBarStyles.css';
+import './SearchBarStyles.css';
 import { Select } from '@mui/material';
-import useSearchBarLogic from '../logic/useSearchBarLogic';
+import useSearchBarLogic from './useSearchBarLogic';
 
 const SearchBar = () => {
-    const {
-        searchTerm,
-        searchType,
-        setSearchTerm,
-        setSearchType,
-        searchTheApi,
-    } = useSearchBarLogic();
+    const { searchType, setSearchTerm, setSearchType, searchTheApi } =
+        useSearchBarLogic();
     return (
         <Box component="form" noValidate autoComplete="off">
             <TextField
@@ -49,7 +44,7 @@ const SearchBar = () => {
             <Button
                 id="search-button"
                 variant="contained"
-                onClick={() => searchTheApi(searchType, searchTerm)}
+                onClick={() => searchTheApi()}
             >
                 Search
             </Button>
