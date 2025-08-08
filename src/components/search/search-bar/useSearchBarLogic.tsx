@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import axios from 'axios';
-import { useSearchResultsContext } from '../../../context';
+import SearchResultsContext from '../../../SearchResultsContext';
 import type { APIResponseObject } from '../../../../types';
 
 function useSearchBarLogic() {
     const [searchTerm, setSearchTerm] = useState<string>();
     const [searchType, setSearchType] = useState('characters');
-    const { setSearchResults } = useSearchResultsContext();
+    const { setSearchResults } = useContext(SearchResultsContext);
 
     const createDynamicURL = () => {
         let dynamicURL = '';
@@ -24,7 +24,6 @@ function useSearchBarLogic() {
         responseData.forEach((searchResultItem) => {
             ResponseDataWithImageURLs.push({
                 ...searchResultItem,
-                // @ts-ignore
                 image: `http://localhost:8000/images/${searchType}/${searchResultItem.name}.png`,
             });
         });

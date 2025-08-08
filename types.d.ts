@@ -2,7 +2,7 @@ export interface FunctionalComponentProps {
     children: React.ReactNode;
 }
 
-export interface SearchResultsContext {
+export interface SearchResultsContextType {
     searchResults: APIResponseObject[];
     setSearchResults: (newSearchResults: APIResponseObject[]) => void;
 }

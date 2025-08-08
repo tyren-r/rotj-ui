@@ -9,6 +9,7 @@ import type { ResultEntryProps } from '../../../../types';
 import './search-results-styles.css';
 
 const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { id, name, image, description, ...resultEntryWithoutCommonFields } =
         resultEntry;
 
@@ -34,7 +35,7 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
                                 <TableCell className="table-cell">
                                     <Typography variant="body2">
                                         {/* 
-// @ts-ignore */}
+// @ts-expect-error The value variable is a string, but unsure how to properly get ts to recognize TODO*/}
                                         {value}
                                     </Typography>
                                 </TableCell>
