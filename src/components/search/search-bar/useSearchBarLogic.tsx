@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useSearchResultsContext } from '../../../context';
 
 function useSearchBarLogic() {
-    const [searchTerm, setSearchTerm] = useState();
+    const [searchTerm, setSearchTerm] = useState<string>();
     const [searchType, setSearchType] = useState('characters');
     const { setSearchResults } = useSearchResultsContext();
 

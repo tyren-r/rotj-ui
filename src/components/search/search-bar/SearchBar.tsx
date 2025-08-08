@@ -10,7 +10,6 @@ import useSearchBarLogic from './useSearchBarLogic';
 
 const SearchBar = () => {
     const {
-        searchTerm,
         searchType,
         setSearchTerm,
         setSearchType,
@@ -49,7 +48,7 @@ const SearchBar = () => {
             <Button
                 id="search-button"
                 variant="contained"
-                onClick={() => searchTheApi(searchType, searchTerm)}
+                onClick={() => searchTheApi()}
             >
                 Search
             </Button>
