@@ -11,7 +11,7 @@ export interface APIResponseObject {
     id: number;
     name: string;
     description: string;
-    image: string;
+    image_url: string;
 }
 
 export interface ResultEntryProps {
