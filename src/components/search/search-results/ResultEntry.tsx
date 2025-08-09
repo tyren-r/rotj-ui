@@ -10,12 +10,12 @@ import './search-results-styles.css';
 
 const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { id, name, image, description, ...resultEntryWithoutCommonFields } =
+    const { id, name, description,image_url, ...resultEntryWithoutCommonFields } =
         resultEntry;
 
     return (
         <Card variant="outlined" id="result-entry-card">
-            <CardMedia id="result-entry-image" image={resultEntry.image} />
+            <CardMedia id="result-entry-image" image={resultEntry.image_url} />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                     {resultEntry.name}
