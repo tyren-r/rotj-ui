@@ -9,9 +9,13 @@ import type { ResultEntryProps } from '../../../../types';
 import './search-results-styles.css';
 
 const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { id, name, description,image_url, ...resultEntryWithoutCommonFields } =
-        resultEntry;
+    const {
+        id,
+        name,
+        description,
+        image_url,
+        ...resultEntryWithoutCommonFields
+    } = resultEntry;
 
     return (
         <Card variant="outlined" id="result-entry-card">
