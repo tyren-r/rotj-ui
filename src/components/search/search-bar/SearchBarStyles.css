@@ -1,5 +1,26 @@
+
+
+/* mobile */
+@media screen and (max-width: 500px) {
 #search-bar{
-    width:80vw;
+    width:50vw;
+    color:white;
+}
+#select{
+    height: 25px;
+    color: white;
+}
+
+#search-button{
+    height:40px;
+    width: 80%;
+    margin-top: 15px;
+}
+}
+/* tablets, laptops, desktops */
+@media screen and (min-width: 501px) {
+#search-bar{
+    width:70vw;
     color:white;
 }
 #select{
@@ -11,4 +32,5 @@
     height:50px;
     margin-left: 10px;
     margin-top: 3px;
+}
 }
