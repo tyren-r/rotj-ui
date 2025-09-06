@@ -12,7 +12,7 @@ const SearchBar = () => {
     const { searchType, setSearchTerm, setSearchType, searchTheApi } =
         useSearchBarLogic();
     return (
-        <Box component="form" noValidate autoComplete="off">
+        <Box component="form" id="search-bar-container" noValidate autoComplete="off">
             <TextField
                 sx={{
                     input: { color: 'white' },
@@ -26,7 +26,7 @@ const SearchBar = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 variant="outlined"
             />
-            <FormControl>
+            <FormControl id="form-control">
                 <InputLabel sx={{ color: 'white' }}>SearchType</InputLabel>
                 <Select
                     id="select"

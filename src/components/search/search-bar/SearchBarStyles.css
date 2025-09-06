@@ -2,18 +2,26 @@
 
 /* mobile */
 @media screen and (max-width: 500px) {
+#search-bar-container{
+    justify-content: center;
+    flex-direction: column;
+    display:flex
+}
 #search-bar{
     width:50vw;
+    height:25px;
     color:white;
 }
 #select{
     height: 25px;
     color: white;
 }
+#form-control{
+    margin-top: 15px;
+}
 
 #search-button{
     height:40px;
-    width: 80%;
     margin-top: 15px;
 }
 }
