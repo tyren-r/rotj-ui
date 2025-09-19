@@ -1,4 +1,11 @@
 {
+  "compilerOptions": {
+  "target": "es6",
+  "lib": ["es6", "dom"],
+  "sourceMap": true,
+  "types": ["cypress", "node"]
+  },
+  "include": ["**/*.ts"],
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

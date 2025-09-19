@@ -18,8 +18,11 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
     } = resultEntry;
 
     return (
-        <Card variant="outlined" id="result-entry-card">
-            <CardMedia id="result-entry-image" image={resultEntry.image_url} />
+        <Card variant="outlined" className="result-entry-card">
+            <CardMedia
+                className="result-entry-image"
+                image={resultEntry.image_url}
+            />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                     {resultEntry.name}

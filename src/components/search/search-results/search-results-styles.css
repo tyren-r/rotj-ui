@@ -7,21 +7,20 @@
     margin-top: 5vh;
     width:98vw;
     overflow: scroll;
-    height:100vh
+    height:100vh;
 }
-
-#result-entry-card{
-    background-color:#222222;
-    color:white;
+.result-entry-card{
+    background-color:#222222 !important;
+    color:white !important;
     display:flex;
-    border: 1px solid white;
+    border: 1px solid white !important;
 }
 /* mobile */
 @media screen and (max-width: 500px) {
-#result-entry-card{
+.result-entry-card{
     display:block;
 }
-#result-entry-image{
+.result-entry-image{
     justify-self: center;
     margin-top: 15px;
     height: 150px;
@@ -35,7 +34,7 @@
 }
 /* tablets,laptops,desktops */
 @media screen and (min-width: 501px) {
-#result-entry-image{
+.result-entry-image{
     height: 300px;
     width:300px;
     min-height:300px;
