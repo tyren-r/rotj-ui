@@ -1,0 +1,5 @@
+span,p,h1,h2,h3,h4,th,td,div,button,.btn{ color: white !important; }
+.swagger-ui{overflow-y: scroll;height:100vh;}
+button{background-color: transparent !important;}
+.opblock-section-header{background: none !important;}
+.url{display:none !important;}

@@ -7,8 +7,8 @@ const SearchPage = () => {
     return (
         <SearchResultsContextProvider>
             <div id="page">
-                <h1 id="title">PYSWAPI</h1>
-                <p id="subtitle">The Python Star Wars API</p>
+                <h1 id="title">SWAPI: Return of the Jedi</h1>
+                <p id="subtitle">The newest iteration of the Star Wars API</p>
                 <SearchBar />
                 <SearchResultsTable />
             </div>
