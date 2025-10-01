@@ -27,8 +27,8 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{backgroundColor: 'transparent', boxShadow: 'none'}}>
-      <Container maxWidth="xl">
+    <AppBar position="static" sx={{backgroundColor: 'black', boxShadow: 'none'}}>
+      <Container maxWidth={false}>
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -65,12 +65,19 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'space-between' }}>
+            <div style={{marginLeft:'5%'}}>
+              <Link to='/'> 
+                <img src="jedi-64.png"/>
+              </Link>
+            </div>
+            <div style={{display:'flex', alignItems:'center', marginRight:'10%'}}>
             {pages.map((page) => (
               <Link to={page.path} key={page.title} style={{ textDecoration: 'none', color: 'white', marginLeft: '20px' }}>
                 <Typography>{page.title}</Typography>
               </Link>
             ))}
+            </div>
           </Box>
         </Toolbar>
       </Container>
