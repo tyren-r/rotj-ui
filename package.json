@@ -1,5 +1,5 @@
 {
-  "name": "star_wars_searcher",
+  "name": "SWAPI:ROTJ",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -21,12 +21,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "cy:open": "cypress open"
+    "start": "vite --config ./config/vite.config.ts",
+    "build": "vite build --config ./config/vite.config.ts",
+    "serve": "vite preview --config ./config/vite.config.ts",
+    "lint": "eslint --config ./config/eslint.config.ts .",
+    "lint:fix": "eslint --config ./config/eslint.config.ts --fix .",
+    "cy:open": "cypress open -config-file ./config/cypress.config.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
