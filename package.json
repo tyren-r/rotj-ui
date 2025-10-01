@@ -26,7 +26,7 @@
     "serve": "vite preview --config ./config/vite.config.ts",
     "lint": "eslint --config ./config/eslint.config.ts .",
     "lint:fix": "eslint --config ./config/eslint.config.ts --fix .",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open -config-file ./config/cypress.config.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
