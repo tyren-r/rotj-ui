@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
@@ -10,6 +9,7 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 import AboutPage from './components/pages/about-page/AboutPage';
 import DocumentationPage from './components/pages/documentation-page/DocumentationPage';
 import SearchPage from './components/pages/search-page/SearchPage';
+import Navbar from './components/header/Navbar';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -19,6 +19,7 @@ root.render(
         <div id="stars" />
         <div id="stars2" />
         <div id="stars3" />
+        <Navbar />
         <Routes>
             <Route path="/" element={<SearchPage />} />
             <Route path="/about" element={<AboutPage />} />
