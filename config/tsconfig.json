@@ -5,7 +5,7 @@
   "sourceMap": true,
   "types": ["cypress", "node"]
   },
-  "include": ["**/*.ts", "eslint.config.cjs"],
+  "include": ["**/*.ts"],
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
