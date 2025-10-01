@@ -24,8 +24,8 @@
     "start": "vite --config ./config/vite.config.ts",
     "build": "vite build --config ./config/vite.config.ts",
     "serve": "vite preview --config ./config/vite.config.ts",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "eslint --config ./config/eslint.config.ts .",
+    "lint:fix": "eslint --config ./config/eslint.config.ts --fix .",
     "cy:open": "cypress open"
   },
   "devDependencies": {
