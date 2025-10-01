@@ -25,45 +25,53 @@ function ResponsiveAppBar() {
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
   return (
     <AppBar position="static" sx={{backgroundColor: 'black', boxShadow: 'none'}}>
       <Container maxWidth={false}>
         <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },justifyContent: 'space-between' }}>
+            <div style={{marginLeft:'5%'}}>
+              <Link to='/'> 
+                <img src="jedi-64.png"/>
+              </Link>
+            </div>
+
+            <div>
             <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
+              size="medium"
               onClick={handleOpenNavMenu}
-              color="inherit"
             >
-              ICON HERE
+              <img src='menu-50.png'/>
             </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
-                horizontal: 'left',
+                horizontal: 'right',
               }}
-              keepMounted
               transformOrigin={{
                 vertical: 'top',
-                horizontal: 'left',
+                horizontal: 'right',
               }}
               open={Boolean(anchorElNav)}
-              sx={{ display: { xs: 'block', md: 'none' } }}
+              onClose={handleCloseNavMenu}
+              sx={{ display: { xs: 'block', md: 'none' },".MuiMenu-paper": 
+      { backgroundColor: "black", },  }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.title} >
+                <MenuItem key={page.title}>
                   <Link to={page.path} >
                     <Typography sx={{ textAlign: 'center' }}>{page.title}</Typography>
                   </Link>
                 </MenuItem>
               ))}
             </Menu>
+            </div>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'space-between' }}>
             <div style={{marginLeft:'5%'}}>
