@@ -4,6 +4,7 @@
   "lib": ["es6", "dom"],
   "sourceMap": true,
   "types": ["cypress", "node"],
+  "composite": true,
   "moduleResolution": "nodenext",
   "module": "nodenext" 
   },
