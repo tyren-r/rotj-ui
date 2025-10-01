@@ -21,9 +21,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
+    "start": "vite --config ./config/vite.config.ts",
+    "build": "vite build --config ./config/vite.config.ts",
+    "serve": "vite preview --config ./config/vite.config.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "cy:open": "cypress open"
