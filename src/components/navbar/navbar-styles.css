@@ -1,0 +1,21 @@
+#app-bar{
+    background-color: black ;
+    box-shadow: none; 
+}
+#icon{
+    margin-left: 5%;
+}
+#pc-links{
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+}
+.pc-link{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+}
+#inner-container{
+    flex-grow: 1;
+    justify-content: space-between;
+}

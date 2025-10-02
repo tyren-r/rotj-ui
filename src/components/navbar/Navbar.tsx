@@ -9,6 +9,7 @@ import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 
 import useNavBarLogic from "./useNavBarLogic";
+import "./navbar-styles.css";
 
 const pages = [
   { title: "Home", path: "/" },
@@ -20,20 +21,14 @@ function ResponsiveAppBar() {
   const { menuAnchor, OpenMenu, CloseMenu } = useNavBarLogic();
 
   return (
-    <AppBar
-      position="static"
-      sx={{ backgroundColor: "black", boxShadow: "none" }}
-    >
+    <AppBar position="static" id="app-bar">
       <Container maxWidth={false}>
         <Toolbar disableGutters>
           <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "flex", md: "none" },
-              justifyContent: "space-between",
-            }}
+            id="inner-container"
+            sx={{ display: { xs: "flex", md: "none" } }}
           >
-            <div style={{ marginLeft: "5%" }}>
+            <div>
               <Link to="/">
                 <img src="jedi-64.png" />
               </Link>
@@ -66,9 +61,7 @@ function ResponsiveAppBar() {
                 {pages.map((page) => (
                   <MenuItem key={page.title}>
                     <Link to={page.path}>
-                      <Typography sx={{ textAlign: "center" }}>
-                        {page.title}
-                      </Typography>
+                      <Typography>{page.title}</Typography>
                     </Link>
                   </MenuItem>
                 ))}
@@ -76,34 +69,17 @@ function ResponsiveAppBar() {
             </div>
           </Box>
           <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "space-between",
-            }}
+            id="inner-container"
+            sx={{ display: { xs: "none", md: "flex" } }}
           >
-            <div style={{ marginLeft: "5%" }}>
+            <div id="icon">
               <Link to="/">
                 <img src="jedi-64.png" />
               </Link>
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginRight: "10%",
-              }}
-            >
+            <div id="pc-links">
               {pages.map((page) => (
-                <Link
-                  to={page.path}
-                  key={page.title}
-                  style={{
-                    textDecoration: "none",
-                    color: "white",
-                    marginLeft: "20px",
-                  }}
-                >
+                <Link to={page.path} key={page.title} className="pc-link">
                   <Typography>{page.title}</Typography>
                 </Link>
               ))}
