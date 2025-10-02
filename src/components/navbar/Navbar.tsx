@@ -1,4 +1,3 @@
-import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -6,10 +5,10 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import { Link } from "react-router";
-// import MenuIcon from '@mui/icons-material/Menu';
-//  download menu svg
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
+
+import useNavBarLogic from "./useNavBarLogic";
 
 const pages = [
   { title: "Home", path: "/" },
@@ -18,16 +17,7 @@ const pages = [
 ];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null,
-  );
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  const { menuAnchor, OpenMenu, CloseMenu } = useNavBarLogic();
 
   return (
     <AppBar
@@ -50,12 +40,12 @@ function ResponsiveAppBar() {
             </div>
 
             <div>
-              <IconButton size="medium" onClick={handleOpenNavMenu}>
+              <IconButton size="medium" onClick={OpenMenu}>
                 <img src="menu-50.png" />
               </IconButton>
               <Menu
                 id="menu-appbar"
-                anchorEl={anchorElNav}
+                anchorEl={menuAnchor}
                 anchorOrigin={{
                   vertical: "bottom",
                   horizontal: "right",
@@ -64,8 +54,8 @@ function ResponsiveAppBar() {
                   vertical: "top",
                   horizontal: "right",
                 }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
+                open={Boolean(menuAnchor)}
+                onClose={CloseMenu}
                 sx={{
                   display: { xs: "block", md: "none" },
                   ".MuiMenu-paper": {

@@ -9,7 +9,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import AboutPage from "./components/pages/about-page/AboutPage";
 import DocumentationPage from "./components/pages/documentation-page/DocumentationPage";
 import SearchPage from "./components/pages/search-page/SearchPage";
-import Navbar from "./components/header/Navbar";
+import Navbar from "./components/navbar/Navbar";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
