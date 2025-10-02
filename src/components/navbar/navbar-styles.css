@@ -1,6 +1,7 @@
 #app-bar{
     background-color: black ;
     box-shadow: none; 
+    position: relative;
 }
 #icon{
     margin-left: 5%;
