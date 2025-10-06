@@ -1,5 +1,51 @@
-span,p,h1,h2,h3,h4,th,td,div,button,.btn{ color: white !important; }
+span,p,h1,h2,h3,h4,th,td,div{ color: white !important; }
+/* scope colors to swagger ui only */
+.swagger-ui span,
+.swagger-ui p,
+.swagger-ui h1,
+.swagger-ui h2,
+.swagger-ui h3,
+.swagger-ui h4,
+.swagger-ui th,
+.swagger-ui td,
+.swagger-ui div {
+  color: white !important;
+}
+
+.swagger-ui button,
+.swagger-ui .btn {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: white !important;
+}
 .swagger-ui{overflow-y: scroll;height:100vh;}
-button{background-color: transparent !important;}
 .opblock-section-header{background: none !important;}
 .url{display:none !important;}
+
+.swagger-ui .models {
+  border-left: 3px solid #61affe !important;
+}
+
+.swagger-ui .models .model-container,
+.swagger-ui .models .model-box {
+  border: 1px solid #61affe !important;
+  border-left-width: 3px !important;
+  background: rgba(97, 175, 254, 0.06) !important;
+  margin: 8px 0 !important;
+}
+
+/* Schemas header bars */
+.swagger-ui .models .models-control,
+.swagger-ui article,
+.swagger-ui .models .model-box .model-box-control {
+  background: rgba(97, 175, 254, 0.15) !important;
+  border-bottom: 1px solid #61affe !important;
+}
+
+/* Arrow/toggle accents */
+.swagger-ui .models .models-control .arrow,
+.swagger-ui article,
+.swagger-ui .models .model-box .model-box-control .arrow {
+  fill: #61affe !important;
+  stroke: #61affe !important;
+}
