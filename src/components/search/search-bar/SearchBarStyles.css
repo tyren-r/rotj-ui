@@ -33,7 +33,7 @@
     color:white;
 }
 #select{
-    height: 25px;
+    height: 15px;
     color: white;
 }
 
@@ -42,5 +42,9 @@
     margin-left: 10px;
     margin-top: 3px;
     background-color: #228be6;
+}
+
+.MuiInputBase-root{
+    padding-left: 0px !important;
 }
 }
