@@ -1,6 +1,5 @@
 .table-cell{
     padding: 0px !important;
-    width: 100px ;
     color:white !important;
 }
 #table-container{
@@ -19,6 +18,9 @@
     width:90%;
     margin-bottom: 20px;
     justify-self: center;
+}
+.result-entry-content{
+    width:100%;
 }
 .table-row{
     border:none !important;
@@ -40,5 +42,6 @@
 .result-entry-image{
     height: 300px;
     width:300px;
+    margin: 20px 30px 20px 30px;
 }
 }

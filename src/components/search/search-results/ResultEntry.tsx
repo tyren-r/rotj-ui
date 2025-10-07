@@ -21,14 +21,14 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
   return (
     <Card variant="outlined" className="result-entry-card">
       <CardMedia className="result-entry-image" image={resultEntry.image_url} />
-      <CardContent>
+      <CardContent className="result-entry-content">
         <Typography gutterBottom variant="h5" component="div">
           {resultEntry.name}
         </Typography>
         <Typography gutterBottom variant="body2">
           {resultEntry.description}
         </Typography>
-        <Table>
+        <Table id="inner-table">
           <TableBody>
             {Object.entries(resultEntryWithoutCommonFields).map(
               ([key, value], i) => (
