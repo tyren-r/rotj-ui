@@ -1,0 +1,18 @@
+#footer-appbar {
+  top: auto;
+  bottom: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.45) !important; /* override MUI transparent */
+}
+
+#footer-toolbar {
+  min-height: 60px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}

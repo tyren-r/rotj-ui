@@ -10,6 +10,7 @@ import AboutPage from "./components/pages/about-page/AboutPage";
 import DocumentationPage from "./components/pages/documentation-page/DocumentationPage";
 import SearchPage from "./components/pages/search-page/SearchPage";
 import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
@@ -25,6 +26,7 @@ root.render(
       <Route path="/about" element={<AboutPage />} />
       <Route path="/docs" element={<DocumentationPage />} />
     </Routes>
+    <Footer />
   </BrowserRouter>,
 );
 
