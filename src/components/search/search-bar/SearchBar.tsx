@@ -26,7 +26,7 @@ const SearchBar = () => {
         placeholder="Try the name of your favorite Star Wars character, vehicle, planet,movie or species - or hit search to see all"
         InputProps={{
           startAdornment: (
-            <FormControl id="form-control" className="searchbar-select-control">
+            <FormControl className="searchbar-select-control">
               <InputLabel>SearchType</InputLabel>
               <Select
                 id="select"
