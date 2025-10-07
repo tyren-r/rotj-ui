@@ -5,17 +5,17 @@
     flex-direction: column;
     display:flex
 }
+.MuiInputBase-root{
+    padding-left: 0px !important;
+}
 #search-bar{
     width:50vw;
     height:25px;
     color:white;
 }
 #select{
-    height: 25px;
+    height: 100%;
     color: white;
-}
-#form-control{
-    margin-top: 15px;
 }
 
 #search-button{
