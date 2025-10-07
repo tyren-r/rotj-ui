@@ -18,7 +18,7 @@ span,p,h1,h2,h3,h4,th,td,div{ color: white !important; }
   background-color: transparent !important;
   color: white !important;
 }
-.swagger-ui{overflow-y: scroll;height:100vh;}
+.swagger-ui{overflow-y: scroll;height:90vh;}
 .opblock-section-header{background: none !important;}
 .url{display:none !important;}
 
