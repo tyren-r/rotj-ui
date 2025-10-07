@@ -1,6 +1,7 @@
 .table-cell{
     padding: 0px !important;
     width: 100px ;
+    color:white !important;
 }
 #table-container{
     margin-top: 5vh;
@@ -18,6 +19,9 @@
     width:90%;
     margin-bottom: 20px;
     justify-self: center;
+}
+.table-row{
+    border:none !important;
 }
 /* mobile */
 @media screen and (max-width: 500px) {

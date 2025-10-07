@@ -3,6 +3,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import type { ResultEntryProps } from "../../../../types";
@@ -28,25 +29,27 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
           {resultEntry.description}
         </Typography>
         <Table>
-          {Object.entries(resultEntryWithoutCommonFields).map(
-            ([key, value], i) => (
-              // Using index as key since these keys are not unique and order won't change
-              <TableRow key={i}>
-                <TableCell className="table-cell">
-                  <Typography variant="body2">
-                    {key.replaceAll("_", " ")}
-                  </Typography>
-                </TableCell>
-                <TableCell className="table-cell">
-                  <Typography variant="body2">
-                    {/* 
+          <TableBody>
+            {Object.entries(resultEntryWithoutCommonFields).map(
+              ([key, value], i) => (
+                // Using index as key since these keys are not unique and order won't change
+                <TableRow key={i}>
+                  <TableCell className="table-cell">
+                    <Typography variant="body2">
+                      {key.replaceAll("_", " ")}
+                    </Typography>
+                  </TableCell>
+                  <TableCell className="table-cell">
+                    <Typography variant="body2">
+                      {/* 
 // @ts-expect-error The value variable is a string, but unsure how to properly get ts to recognize TODO*/}
-                    {value}
-                  </Typography>
-                </TableCell>
-              </TableRow>
-            ),
-          )}
+                      {value}
+                    </Typography>
+                  </TableCell>
+                </TableRow>
+              ),
+            )}
+          </TableBody>
         </Table>
       </CardContent>
     </Card>
