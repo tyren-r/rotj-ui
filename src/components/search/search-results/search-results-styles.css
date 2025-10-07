@@ -1,6 +1,4 @@
-
 .table-cell{
-    color: white;
     padding: 0px !important;
     width: 100px ;
 }
@@ -31,12 +29,6 @@
     margin-top: 15px;
     height: 150px;
     width:150px;
-    min-height:150px;
-    min-width:150px;
-    max-width:150px;
-    max-height:150px;
-    position: relative;
-    z-index: 1;
 }
 }
 /* tablets,laptops,desktops */
@@ -44,10 +36,5 @@
 .result-entry-image{
     height: 300px;
     width:300px;
-    min-height:300px;
-    min-width:300px;
-    max-width:300px;
-    max-height:300px;
-    z-index: 1;
 }
 }
