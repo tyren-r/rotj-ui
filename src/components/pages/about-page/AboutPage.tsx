@@ -15,7 +15,7 @@ const AboutPage: React.FC = () => (
           </Typography>
           <Typography gutterBottom variant="body1" paragraph>
             {section.paragraph}{" "}
-        </Typography>
+          </Typography>
         </CardContent>
       </Card>
     ))}
