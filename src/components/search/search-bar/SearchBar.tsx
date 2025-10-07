@@ -19,33 +19,36 @@ const SearchBar = () => {
       autoComplete="off"
     >
       <TextField
-        sx={{
-          input: { color: "white" },
-          label: { color: "white" },
-          fieldset: {
-            boxShadow: "1px 1px 10px #fff, 1px 1px 10px #ccc",
-          },
-        }}
+        className="searchbar-textfield"
         id="search-bar"
-        label="May the force be with you..."
         onChange={(e) => setSearchTerm(e.target.value)}
         variant="outlined"
+        placeholder="Try the name of your favorite Star Wars character, vehicle, planet,movie or species - or hit search to see all"
+        InputProps={{
+          startAdornment: (
+            <FormControl className="searchbar-select-control">
+              <InputLabel>SearchType</InputLabel>
+              <Select
+                id="select"
+                value={searchType}
+                label="Search Type"
+                MenuProps={{
+                  PaperProps: {
+                    className: "searchbar-menu-paper",
+                  },
+                }}
+                onChange={(e) => setSearchType(e.target.value as string)}
+              >
+                <MenuItem value="characters">Characters</MenuItem>
+                <MenuItem value="vehicles">Vehicles</MenuItem>
+                <MenuItem value="planets">Planets</MenuItem>
+                <MenuItem value="movies">Movies</MenuItem>
+                <MenuItem value="species">Species</MenuItem>
+              </Select>
+            </FormControl>
+          ),
+        }}
       />
-      <FormControl id="form-control">
-        <InputLabel sx={{ color: "white" }}>SearchType</InputLabel>
-        <Select
-          id="select"
-          value={searchType}
-          label="Search Type"
-          onChange={(e) => setSearchType(e.target.value)}
-        >
-          <MenuItem value="characters">Characters</MenuItem>
-          <MenuItem value="vehicles">Vehicles</MenuItem>
-          <MenuItem value="planets">Planets</MenuItem>
-          <MenuItem value="movies">Movies</MenuItem>
-          <MenuItem value="species">Species</MenuItem>
-        </Select>
-      </FormControl>
       <Button
         id="search-button"
         variant="contained"
