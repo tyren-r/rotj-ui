@@ -1,19 +1,19 @@
 [
   {
     "title": "General Info",
-    "paragraph": "SWAPI: Return of the Jedi is the newest iteration of the Star Wars API. I've built it from the ground up independently. The only thing I used from a previous implementation is the json data, which I've since heavily modified and added onto. This new version is built using modern technologies and is designed to be more scalable, maintainable, and user-friendly than its predecessor."
+    "paragraph": "SWAPI: Return of the Jedi is the newest iteration of the Star Wars API. I've built it from the ground up independently. The only thing used from a previous implementation is the json data, which I've since heavily modified and added onto. This new version is built using modern technologies and is designed to be more scalable, performant, maintainable, and user-friendly than its predecessor."
   },
   {
     "title": "Technologies Used",
-    "paragraph": "The front-end of the application is built in React with Typescript and MaterialUI, while the back-end is built in FastAPI with Python, coupled with a SQLite database. This application is containerized with Docker and deployed to AWS. For front-end testing I use Cypress, and for backend testing I use PyTest."
+    "paragraph": "The front-end of the application is built in React with Typescript and MaterialUI, while the back-end is built in FastAPI with Python, coupled with a SQLite database managed with SQLModel. This application is containerized with Docker and deployed to AWS. For front-end testing I use Cypress, and for backend testing I use PyTest."
   },
   {
     "title": "Why I built another SWAPI app",
-    "paragraph": "A long time ago, in a galaxy actually pretty much the same as this one, I was given a take home assignment for a job interview. The task was to create a front-end for (the original) SWAPI, with certain functionality. During the completion of that task, I encountered some API behavior I found rather frustrating. Over the years, I made small updates to that front-end as a portfolio project, migrating to the newer swapi.tech . After being laid off twice in 2024 (ouch, bummer I know) I attacked that front-end applet with a renewed vigor - I needed some solid work in my portfolio. While plugging away at the front end and trying to design around the api behavior I disagreed with, it dawned on me. Why not recreate the API itself? You are a full-stack developer afterall,it really only makes sense. And here I am, almost a year later with that darlind project of mine in open beta."
+    "paragraph": "A long time ago, in a galaxy pretty much the same as this one... I was given a take home assignment for a job interview. The task was to create a front-end for the original SWAPI.co. Over the years, I made small updates to that front-end as a portfolio project, migrating to the newer swapi.tech . During the use of these APIS, I was always plagued by questions such as \"Why are they returning primary key urls instead of names for related entities?\", \"Why haven't images been added, or any other data?\", \"Why are all fields strings?\", etc. I'm sure these questions have good answers, but I wanted to create my own swapi as a new answer to these questions."
   },
   {
     "title": "What about swapi.tech?",
-    "paragraph": "swapi.tech is still available, and I hope always will be. Preferring to work with a JS API, monolitic architecture, or the known stability/history of the application are all good reasons to continue using it. Without Swapi.tech and all the work that Ryan Curtis did, my own application wouldn't exist. To him I owe both my gratitude and appreciation."
+    "paragraph": "swapi.tech is still available, and I hope always will be. Preferring to work with a JS API is a good reason to continue using it. Without Swapi.tech and all the work that Ryan Curtis did, my own application wouldn't exist. I have massive gratitude for him."
   },
   {
     "title": "Thank you / credit due",
