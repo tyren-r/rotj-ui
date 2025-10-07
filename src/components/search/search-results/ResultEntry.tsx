@@ -29,8 +29,9 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
         </Typography>
         <Table>
           {Object.entries(resultEntryWithoutCommonFields).map(
-            ([key, value]) => (
-              <TableRow>
+            ([key, value], i) => (
+              // Using index as key since these keys are not unique and order won't change
+              <TableRow key={i}>
                 <TableCell className="table-cell">
                   <Typography variant="body2">
                     {key.replaceAll("_", " ")}

@@ -13,7 +13,7 @@ const SearchResultsTable = () => {
     <TableContainer id="table-container">
       <Table>
         {searchResults.map((resultEntry: APIResponseObject) => (
-          <ResultEntry resultEntry={resultEntry} />
+          <ResultEntry key={resultEntry.id} resultEntry={resultEntry} />
         ))}
       </Table>
     </TableContainer>
