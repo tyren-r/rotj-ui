@@ -31,6 +31,7 @@ const SearchBar = () => {
               <Select
                 id="select"
                 value={searchType}
+                name="searchType-select"
                 label="Search Type"
                 MenuProps={{
                   PaperProps: {
