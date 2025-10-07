@@ -6,8 +6,8 @@
 #table-container{
     margin-top: 5vh;
     width:98vw;
-    overflow: scroll;
-    height:100vh;
+    overflow-y: scroll;
+    height:65vh;
 }
 .result-entry-card{
     background-color:#222222 !important;
