@@ -1,3 +1,4 @@
+
 .table-cell{
     color: white;
     padding: 0px !important;
@@ -5,7 +6,7 @@
 }
 #table-container{
     margin-top: 5vh;
-    width:98vw;
+    width:100vw;
     overflow-y: scroll;
     height:65vh;
 }
@@ -14,6 +15,11 @@
     color:white !important;
     display:flex;
     border: 1px solid white !important;
+    z-index: 1;
+    position: relative;
+    width:90%;
+    margin-bottom: 20px;
+    justify-self: center;
 }
 /* mobile */
 @media screen and (max-width: 500px) {
@@ -29,7 +35,8 @@
     min-width:150px;
     max-width:150px;
     max-height:150px;
-    background-size:cover;
+    position: relative;
+    z-index: 1;
 }
 }
 /* tablets,laptops,desktops */
@@ -41,7 +48,6 @@
     min-width:300px;
     max-width:300px;
     max-height:300px;
-    background-size:cover;
     z-index: 1;
 }
 }
