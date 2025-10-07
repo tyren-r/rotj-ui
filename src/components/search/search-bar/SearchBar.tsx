@@ -19,21 +19,7 @@ const SearchBar = () => {
       autoComplete="off"
     >
       <TextField
-        sx={{
-          // keep input text white
-          "& .MuiInputBase-input": { color: "white" },
-          // apply outline styles ONLY to this TextField's own notched outline
-          "& > .MuiOutlinedInput-root > fieldset": {
-            boxShadow: "1px 1px 10px #fff, 1px 1px 10px #ccc",
-            borderColor: "rgba(255,255,255,0.5)",
-          },
-          "& > .MuiOutlinedInput-root:hover > fieldset": {
-            borderColor: "rgba(255,255,255,0.5)",
-          },
-          "& > .MuiOutlinedInput-root.Mui-focused > fieldset": {
-            borderColor: "rgba(255,255,255,0.5)",
-          },
-        }}
+        className="searchbar-textfield"
         id="search-bar"
         onChange={(e) => setSearchTerm(e.target.value)}
         variant="outlined"
@@ -42,42 +28,16 @@ const SearchBar = () => {
           startAdornment: (
             <FormControl
               id="form-control"
-              sx={{
-                // keep label white on focus
-                "& .MuiInputLabel-root": {
-                  color: "white",
-                  "&.Mui-focused": { color: "white" },
-                },
-                // keep select text and icon white
-                "& .MuiSelect-select": { color: "white" },
-                "& .MuiSvgIcon-root": { color: "white" },
-                // keep select outline consistent without boxShadow
-                "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-                  borderColor: "rgba(255,255,255,0.5)",
-                },
-                "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
-                  {
-                    borderColor: "rgba(255,255,255,0.5)",
-                  },
-                "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-                  { borderColor: "rgba(255,255,255,0.5)" },
-              }}
+              className="searchbar-select-control"
             >
-              <InputLabel
-                sx={{
-                  color: "white",
-                  "&.Mui-focused": { color: "white" },
-                }}
-              >
-                SearchType
-              </InputLabel>
+              <InputLabel>SearchType</InputLabel>
               <Select
                 id="select"
                 value={searchType}
                 label="Search Type"
                 MenuProps={{
                   PaperProps: {
-                    sx: { backgroundColor: "black" },
+                    className: "searchbar-menu-paper",
                   },
                 }}
                 onChange={(e) => setSearchType(e.target.value as string)}
