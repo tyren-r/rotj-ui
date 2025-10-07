@@ -19,7 +19,6 @@ code {
 
 html {
   height: 100% !important;
-  width: 100%;
 }
 
 /* Keyframes */
@@ -31,7 +30,8 @@ html {
 		transform: translateY(-100vh);
 	}
 }
-@function multiple-box-shadows($stars, $size, $color){
+
+@function multiple-box-shadows($stars, $color){
 	$box-shadow: math.random(100)+'vw ' + math.random(100)+'vh ' + $color;
 	@for $i from 1 through $stars {
 		 $box-shadow: $box-shadow + ', ' + math.random(160)+'vw ' + math.random(160)+'vh ' + $color;
@@ -39,13 +39,12 @@ html {
 	@return string.unquote($box-shadow);
 }
 @mixin parallax-layer($stars, $size: 1px, $timer: 25s, $color: white, $easing: linear){
-	$shadows: multiple-box-shadows($stars, $size, $color);
+	$shadows: multiple-box-shadows($stars, $color);
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: $size;
 	height: $size;
-	background: transparent;
 	pointer-events: none;
 	box-shadow: $shadows;
 	animation: parallax $timer $easing infinite;

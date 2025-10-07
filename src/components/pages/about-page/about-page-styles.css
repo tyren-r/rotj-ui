@@ -1,0 +1,14 @@
+#about-page-container {
+  height: 85vh;
+  overflow-y: scroll;
+  padding:2% 10% 0px 10%;
+}
+
+.about-section{
+    background-color:#222222 !important;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+    border: 1px solid white !important;
+    color: white !important;
+}

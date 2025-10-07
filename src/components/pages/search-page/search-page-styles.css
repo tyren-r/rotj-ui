@@ -1,7 +1,6 @@
 #page{
   width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
@@ -12,6 +11,7 @@
 	margin-bottom: 0px;
 	font-size: 40px;
 	text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
+	text-align: center;
   }
   #subtitle {
 	color: #FFF;
@@ -19,5 +19,6 @@
 	font-weight: 300;
 	font-size: 30px;
 	text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
+	text-align: center;
   }
 

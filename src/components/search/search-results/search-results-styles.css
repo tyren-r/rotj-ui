@@ -1,19 +1,23 @@
 .table-cell{
-    color: white;
     padding: 0px !important;
     width: 100px ;
 }
 #table-container{
     margin-top: 5vh;
-    width:98vw;
-    overflow: scroll;
-    height:100vh;
+    width:100vw;
+    overflow-y: scroll;
+    height:65vh;
 }
 .result-entry-card{
     background-color:#222222 !important;
     color:white !important;
     display:flex;
     border: 1px solid white !important;
+    z-index: 1;
+    position: relative;
+    width:90%;
+    margin-bottom: 20px;
+    justify-self: center;
 }
 /* mobile */
 @media screen and (max-width: 500px) {
@@ -25,11 +29,6 @@
     margin-top: 15px;
     height: 150px;
     width:150px;
-    min-height:150px;
-    min-width:150px;
-    max-width:150px;
-    max-height:150px;
-    background-size:cover;
 }
 }
 /* tablets,laptops,desktops */
@@ -37,10 +36,5 @@
 .result-entry-image{
     height: 300px;
     width:300px;
-    min-height:300px;
-    min-width:300px;
-    max-width:300px;
-    max-height:300px;
-    background-size:cover;
 }
 }
