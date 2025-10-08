@@ -3,12 +3,12 @@ import Table from "@mui/material/Table";
 import TableContainer from "@mui/material/TableContainer";
 import TableBody from "@mui/material/TableBody";
 import SearchResultsContext from "../../../SearchResultsContext";
-import Typography from "@mui/material/Typography";
 import "./search-results-styles.css";
 import ResultEntry from "./ResultEntry";
 import type { APIResponseObject } from "../../../../types";
 import LoadingSpinner from "../loading-spinner/LoadingSpinner";
 import { TableCell, TableRow } from "@mui/material";
+import Typography from "@mui/material/Typography";
 
 const SearchResultsTable = () => {
   const { searchResults } = useContext(SearchResultsContext);
@@ -27,10 +27,14 @@ const SearchResultsTable = () => {
       </Table>
     </TableContainer>
   ) : searchResults && searchResults.length === 0 ? (
-    <Typography mt={3} variant="h4" color={"white"}>
-      No results found for that term
-    </Typography>
-  ) : <LoadingSpinner/>;
+    <div id="noResultsWrapper" role="status" aria-live="polite">
+      <Typography id="noResultsText" variant="body1" color="inherit">
+        No results found for that term
+      </Typography>
+    </div>
+  ) : (
+    <LoadingSpinner />
+  );
 };
 
 export default SearchResultsTable;
