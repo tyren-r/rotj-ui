@@ -40,7 +40,12 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
         >
           {resultEntry.name}
         </Typography>
-        <Typography gutterBottom variant="body2" component="p">
+        <Typography
+          gutterBottom
+          variant="body2"
+          component="p"
+          id={`result-desc-${id}`}
+        >
           {resultEntry.description}
         </Typography>
         <Table id="inner-table" aria-label={`Details for ${resultEntry.name}`}>

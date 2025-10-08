@@ -13,6 +13,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/tr95/"
             underline="hover"
             target="_blank"
+            rel="noopener noreferrer"
             color="inherit"
           >
             LinkedIn
@@ -21,7 +22,7 @@ const Footer = () => {
             href="https://github.com/"
             underline="hover"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             color="inherit"
           >
             GitHub
