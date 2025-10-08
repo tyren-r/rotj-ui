@@ -5,7 +5,9 @@ import SearchResultsContext from "./SearchResultsContext";
 const SearchResultsContextProvider: React.FC<FunctionalComponentProps> = ({
   children,
 }) => {
-  const [searchResults, setSearchResults] = useState<APIResponseObject[] | undefined>(undefined);
+  const [searchResults, setSearchResults] = useState<
+    APIResponseObject[] | undefined
+  >(undefined);
   const [isLoading, setIsLoading] = useState(false);
   const contextProviderValue = useMemo(
     () => ({

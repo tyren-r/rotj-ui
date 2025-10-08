@@ -3,7 +3,6 @@ import "./loading-spinner.css";
 import SearchResultsContext from "../../../SearchResultsContext";
 import Typography from "@mui/material/Typography";
 
-
 const LoadingSpinner: React.FC = () => {
   const { isLoading } = useContext(SearchResultsContext);
   if (!isLoading) return null;
@@ -22,7 +21,12 @@ const LoadingSpinner: React.FC = () => {
           id="spinnerImage"
           style={{ width: 180, height: 180 }}
         />
-        <Typography id="spinnerText" variant="body1" color="inherit" component="span">
+        <Typography
+          id="spinnerText"
+          variant="body1"
+          color="inherit"
+          component="span"
+        >
           Loading...
         </Typography>
       </div>
