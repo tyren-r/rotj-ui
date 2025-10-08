@@ -6,7 +6,7 @@ import "./about-page-styles.css";
 import aboutTextJson from "./about-page-text.json";
 
 const AboutPage: React.FC = () => (
-  <Box id="about-page-container">
+  <Box id="about-page-container" component="main" role="main" aria-label="About SWAPI: ROTJ">
     {aboutTextJson.map((section) => (
       <Card variant="outlined" className="about-section" key={section.title}>
         <CardContent>
@@ -27,6 +27,7 @@ const AboutPage: React.FC = () => (
         <Typography gutterBottom variant="body1" paragraph>
           <a
             target="_blank"
+            rel="noopener noreferrer"
             style={{ color: "inherit" }}
             href="https://icons8.com/icon/QqhR3q5pMyCZ/jedi"
           >
@@ -36,6 +37,7 @@ const AboutPage: React.FC = () => (
           <a
             style={{ color: "inherit" }}
             target="_blank"
+            rel="noopener noreferrer"
             href="https://icons8.com"
           >
             Icons8
@@ -43,6 +45,7 @@ const AboutPage: React.FC = () => (
           <br />
           <a
             target="_blank"
+            rel="noopener noreferrer"
             style={{ color: "inherit" }}
             href="https://icons8.com/icon/8113/menu"
           >
@@ -52,6 +55,7 @@ const AboutPage: React.FC = () => (
           <a
             style={{ color: "inherit" }}
             target="_blank"
+            rel="noopener noreferrer"
             href="https://icons8.com"
           >
             Icons8
@@ -60,6 +64,7 @@ const AboutPage: React.FC = () => (
           Starry parallax background orignally from{" "}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             style={{ color: "inherit" }}
             href="https://codepen.io/sarazond/pen/LYGbwj"
           >
@@ -70,6 +75,7 @@ const AboutPage: React.FC = () => (
           Json Data has been heavily modified but originally from{" "}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             style={{ color: "inherit" }}
             href="https://github.com/semperry/swapi"
           >
