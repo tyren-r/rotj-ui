@@ -78,3 +78,20 @@
     word-break: break-word;
 }
 }
+
+#noResultsWrapper{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-height: 60vh; 
+    color: var(--text-primary, #228be6);
+}
+
+#noResultsText{
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    text-shadow:
+        0 0 2px rgba(255, 255, 255, 0.75),
+        0 0 8px rgba(255, 255, 255, 0.35);
+    pointer-events: none;
+}
