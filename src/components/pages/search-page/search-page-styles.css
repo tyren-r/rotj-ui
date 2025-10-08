@@ -6,19 +6,19 @@
 }
 
 #title {
-	color: #FFF;
+	color: #FDD200;
 	font-weight: 300;
 	margin-bottom: 0px;
 	font-size: 40px;
-	text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
+	text-shadow: 1px 1px 10px black, 1px 1px 10px white;
 	text-align: center;
   }
   #subtitle {
-	color: #FFF;
+	color: #FDD200;
 	margin-top: 0px;
 	font-weight: 300;
 	font-size: 30px;
-	text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
+	text-shadow: 1px 1px 10px black, 1px 1px 10px white;
 	text-align: center;
   }
 
