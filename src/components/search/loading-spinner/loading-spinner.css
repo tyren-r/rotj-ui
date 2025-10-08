@@ -16,7 +16,7 @@
 
 #spinnerImage {
   display: inline-block;
-  animation: spinner-rotate 1.9008s linear infinite, spinner-glow 3.168s ease-in-out infinite; /* slowed another ~10% */
+  animation: spinner-rotate 1.9008s linear infinite, spinner-glow 3.168s ease-in-out infinite; 
   opacity: 0.95;
   transform-origin: center;
   transform-style: preserve-3d;
