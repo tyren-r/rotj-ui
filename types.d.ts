@@ -1,4 +1,4 @@
-import { SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 export interface FunctionalComponentProps {
   children: React.ReactNode;
@@ -6,7 +6,9 @@ export interface FunctionalComponentProps {
 
 export interface SearchResultsContextType {
   searchResults: APIResponseObject[] | undefined;
-  setSearchResults: SetStateAction<APIResponseObject[] | undefined>;
+  setSearchResults: Dispatch<SetStateAction<APIResponseObject[] | undefined>>;
+  isLoading: boolean;
+  setIsLoading: Dispatch<SetStateAction<boolean>>;
 }
 
 export interface APIResponseObject {
