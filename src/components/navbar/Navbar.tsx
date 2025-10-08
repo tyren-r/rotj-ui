@@ -23,24 +23,38 @@ function ResponsiveAppBar() {
   return (
     <AppBar position="static" id="app-bar">
       <Container maxWidth={false}>
-        <Toolbar disableGutters>
+        <Toolbar
+          disableGutters
+          component="nav"
+          aria-label="Primary navigation"
+        >
           <Box
             id="inner-container"
             sx={{ display: { xs: "flex", md: "none" } }}
           >
             <div>
-              <Link to="/">
-                <img src="jedi-64.png" />
+              <Link to="/" aria-label="Home">
+                <img src="jedi-64.png" alt="Jedi Logo Image" />
               </Link>
             </div>
 
             <div>
-              <IconButton size="medium" onClick={OpenMenu}>
-                <img src="menu-50.png" />
+              <IconButton
+                id="nav-menu-button"
+                size="medium"
+                onClick={OpenMenu}
+                aria-label="Open mobile navigation menu"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                aria-expanded={Boolean(menuAnchor) ? "true" : undefined}
+              >
+                <img src="menu-50.png" alt="" aria-hidden="true" />
               </IconButton>
               <Menu
                 id="menu-appbar"
                 anchorEl={menuAnchor}
+                aria-labelledby="nav-menu-button"
+                aria-label="Main navigation menu"
                 anchorOrigin={{
                   vertical: "bottom",
                   horizontal: "right",
@@ -73,13 +87,13 @@ function ResponsiveAppBar() {
             sx={{ display: { xs: "none", md: "flex" } }}
           >
             <div id="icon">
-              <Link to="/">
-                <img src="jedi-64.png" />
+              <Link to="/" aria-label="Home">
+                <img src="jedi-64.png" alt="" aria-hidden="true" />
               </Link>
             </div>
             <div id="pc-links">
               {pages.map((page) => (
-                <Link to={page.path} key={page.title} className="pc-link">
+                <Link to={page.path} key={page.title} aria-label={page.title} className="pc-link">
                   <Typography>{page.title}</Typography>
                 </Link>
               ))}
