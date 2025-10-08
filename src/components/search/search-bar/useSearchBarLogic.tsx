@@ -5,7 +5,7 @@ import SearchResultsContext from "../../../SearchResultsContext";
 function useSearchBarLogic() {
   const [searchTerm, setSearchTerm] = useState<string>();
   const [searchType, setSearchType] = useState("characters");
-  const { setSearchResults } = useContext(SearchResultsContext);
+  const { setSearchResults, setIsLoading } = useContext(SearchResultsContext);
 
   const createDynamicURL = () => {
     let dynamicURL = "";
@@ -18,13 +18,15 @@ function useSearchBarLogic() {
   };
 
   const searchTheApi = async () => {
+    setIsLoading(true);
     try {
       const url = createDynamicURL();
-      await axios.get(url).then(async (response) => {
-        setSearchResults(response.data);
-      });
+      const response = await axios.get(url);
+      setSearchResults(response.data);
     } catch (error) {
       alert(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
