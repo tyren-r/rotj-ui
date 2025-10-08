@@ -55,7 +55,7 @@
 /* tablets,laptops,desktops */
 @media screen and (min-width: 501px) {
 .result-entry-card{
-    width:75%
+    width:77%
 }
 .result-entry-image{
     height: 300px;
@@ -64,5 +64,17 @@
 }
 #inner-table{
     width:70%;
+}
+#inner-table{
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+#inner-table .table-cell:first-child{
+    width: 35%;
+    white-space: nowrap;
+}
+#inner-table .table-cell:last-child{
+    width: 65%;
+    word-break: break-word;
 }
 }
