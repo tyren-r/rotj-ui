@@ -15,7 +15,6 @@
     border: 1px solid white !important;
     z-index: 1;
     position: relative;
-    width:90%;
     margin-bottom: 20px;
     justify-self: center;
 }
@@ -29,6 +28,7 @@
 @media screen and (max-width: 500px) {
 .result-entry-card{
     display:block;
+    width: 90%;
 }
 .result-entry-image{
     justify-self: center;
@@ -36,12 +36,21 @@
     height: 150px;
     width:150px;
 }
+#inner-table{
+    width:80%;
+}
 }
 /* tablets,laptops,desktops */
 @media screen and (min-width: 501px) {
+.result-entry-card{
+    width:75%
+}
 .result-entry-image{
     height: 300px;
     width:300px;
     margin: 20px 30px 20px 30px;
+}
+#inner-table{
+    width:70%;
 }
 }
