@@ -20,7 +20,7 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
 
   // Treat remaining fields as a generic record to get properly typed entries
   const resultEntryFields = Object.entries(
-    resultEntryWithoutCommonFields as Record<string, unknown>
+    resultEntryWithoutCommonFields as Record<string, unknown>,
   );
 
   return (
@@ -44,9 +44,7 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
                   </Typography>
                 </TableCell>
                 <TableCell className="table-cell">
-                  <Typography variant="body2">
-                    {String(value)}
-                  </Typography>
+                  <Typography variant="body2">{String(value)}</Typography>
                 </TableCell>
               </TableRow>
             ))}
