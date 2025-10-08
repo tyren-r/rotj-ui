@@ -40,43 +40,16 @@
   color: white;
   padding-left: 10px;
 }
-.searchbar-textfield .MuiOutlinedInput-root > fieldset {
-  box-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
-  border-color: rgba(255,255,255,0.5);
-}
-.searchbar-textfield .MuiOutlinedInput-root:hover > fieldset {
-  border-color: rgba(255,255,255,0.5);
-}
-.searchbar-textfield .MuiOutlinedInput-root.Mui-focused > fieldset {
+.searchbar-textfield .MuiOutlinedInput-root > fieldset,.searchbar-textfield .MuiOutlinedInput-root:hover > fieldset,.searchbar-textfield .MuiOutlinedInput-root.Mui-focused > fieldset {
+
   border-color: rgba(255,255,255,0.5);
 }
 
-/* Moved from sx: Select/FormControl styling */
-.searchbar-select-control .MuiInputLabel-root {
-  color: white;
-}
-.searchbar-select-control .MuiInputLabel-root.Mui-focused {
-  color: white;
-}
-.searchbar-select-control .MuiSelect-select {
-  color: white;
-}
-.searchbar-select-control .MuiSvgIcon-root {
+.searchbar-select-control .MuiSelect-select,.searchbar-select-control .MuiSvgIcon-root,.searchbar-select-control .MuiInputLabel-root.Mui-focused, .searchbar-select-control .MuiInputLabel-root {
   color: white;
 }
 .searchbar-select-control .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
-  border-color: rgba(255,255,255,0.5);
-}
-.searchbar-select-control .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
-  border-color: rgba(255,255,255,0.5);
-}
-.searchbar-select-control .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: rgba(255,255,255,0.5);
-}
-
-/* Remove box shadow from Select only */
-.searchbar-select-control .MuiOutlinedInput-notchedOutline {
-  box-shadow: none !important;
+  border: none !important;
 }
 
 /* Menu Paper from MenuProps */
