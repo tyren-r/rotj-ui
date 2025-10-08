@@ -24,16 +24,33 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
   );
 
   return (
-    <Card variant="outlined" className="result-entry-card">
-      <CardMedia className="result-entry-image" image={resultEntry.image_url} />
+    <Card
+      variant="outlined"
+      className="result-entry-card"
+      aria-labelledby={`result-title-${id}`}
+      aria-describedby={`result-desc-${id}`}
+    >
+      <CardMedia
+        className="result-entry-image"
+        image={resultEntry.image_url}
+      />
       <CardContent className="result-entry-content">
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="h3"
+          id={`result-title-${id}`}
+        >
           {resultEntry.name}
         </Typography>
-        <Typography gutterBottom variant="body2">
+        <Typography
+          gutterBottom
+          variant="body2"
+          component="p"
+        >
           {resultEntry.description}
         </Typography>
-        <Table id="inner-table">
+        <Table id="inner-table" aria-label={`Details for ${resultEntry.name}`}>
           <TableBody>
             {resultEntryFields.map(([key, value], i) => (
               // Using index as key since these keys are not unique and order won't change
