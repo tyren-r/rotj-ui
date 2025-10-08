@@ -59,9 +59,9 @@ function ResponsiveAppBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page.title}>
+                  <MenuItem onClick={CloseMenu} key={page.title}>
                     <Link to={page.path}>
-                      <Typography>{page.title}</Typography>
+                      <Typography color="white">{page.title}</Typography>
                     </Link>
                   </MenuItem>
                 ))}
