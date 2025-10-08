@@ -23,12 +23,17 @@ const SearchBar = () => {
       <TextField
         className="searchbar-textfield"
         id="search-bar"
+        type="search"
         onChange={(e) => setSearchTerm(e.target.value)}
         variant="outlined"
         placeholder="Try the name of your favorite Star Wars character, vehicle, planet, movie or species - or hit search to see all"
         inputProps={{
+          name: "q",
           "aria-label": "Search term",
           "aria-describedby": "subtitle",
+          autoCorrect: "off",
+          autoCapitalize: "none",
+          enterKeyHint: "search",
         }}
         InputProps={{
           startAdornment: (
