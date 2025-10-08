@@ -84,7 +84,7 @@
     place-items: center;
     width: 100%;
     min-height: 60vh; 
-    color: var(--text-secondary, #8fb3ff);
+    color: var(--text-primary, #228be6);
 }
 
 #noResultsText{
