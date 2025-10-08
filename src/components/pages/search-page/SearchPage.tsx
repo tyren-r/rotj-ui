@@ -12,7 +12,7 @@ const SearchPage = () => {
     const meta = document.querySelector('meta[name="description"]');
     meta?.setAttribute(
       "content",
-      "Search Star Wars characters, vehicles, planets, movies and species from SWAPI: Return of the Jedi."
+      "Search Star Wars characters, vehicles, planets, movies and species from SWAPI: Return of the Jedi.",
     );
     const canonical = document.querySelector('link[rel="canonical"]');
     canonical?.setAttribute("href", `${window.location.origin}/`);

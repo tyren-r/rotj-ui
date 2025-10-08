@@ -12,7 +12,7 @@ const AboutPage: React.FC = () => {
     const meta = document.querySelector('meta[name="description"]');
     meta?.setAttribute(
       "content",
-      "Learn about SWAPI: Return of the Jedi, technologies used, attributions, and the author."
+      "Learn about SWAPI: Return of the Jedi, technologies used, attributions, and the author.",
     );
     const canonical = document.querySelector('link[rel="canonical"]');
     canonical?.setAttribute("href", `${window.location.origin}/about`);

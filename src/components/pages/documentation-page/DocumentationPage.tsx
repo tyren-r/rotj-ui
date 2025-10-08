@@ -10,7 +10,7 @@ const DocumentationPage: React.FC = () => {
     const meta = document.querySelector('meta[name="description"]');
     meta?.setAttribute(
       "content",
-      "Interactive OpenAPI documentation for SWAPI: Return of the Jedi."
+      "Interactive OpenAPI documentation for SWAPI: Return of the Jedi.",
     );
     const canonical = document.querySelector('link[rel="canonical"]');
     canonical?.setAttribute("href", `${window.location.origin}/docs`);
