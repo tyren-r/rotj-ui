@@ -15,6 +15,8 @@ const SearchBar = () => {
     <Box
       component="form"
       id="search-bar-container"
+      role="search"
+      aria-label="Search the Star Wars API"
       noValidate
       autoComplete="off"
     >
@@ -23,16 +25,22 @@ const SearchBar = () => {
         id="search-bar"
         onChange={(e) => setSearchTerm(e.target.value)}
         variant="outlined"
-        placeholder="Try the name of your favorite Star Wars character, vehicle, planet,movie or species - or hit search to see all"
+        placeholder="Try the name of your favorite Star Wars character, vehicle, planet, movie or species - or hit search to see all"
+        inputProps={{
+          "aria-label": "Search term",
+          "aria-describedby": "subtitle",
+        }}
         InputProps={{
           startAdornment: (
             <FormControl className="searchbar-select-control">
-              <InputLabel>SearchType</InputLabel>
+              <InputLabel id="search-type-label">Search type</InputLabel>
               <Select
                 id="select"
+                labelId="search-type-label"
                 value={searchType}
                 name="searchType-select"
-                label="Search Type"
+                label="Search type"
+                aria-label="Search type"
                 MenuProps={{
                   PaperProps: {
                     className: "searchbar-menu-paper",
@@ -53,6 +61,8 @@ const SearchBar = () => {
       <Button
         id="search-button"
         variant="contained"
+        aria-label="Execute search"
+        aria-controls="table-container"
         onClick={() => searchTheApi()}
       >
         Search

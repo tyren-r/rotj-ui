@@ -14,10 +14,12 @@ const LoadingSpinner: React.FC = () => {
         role="status"
         aria-live="polite"
         aria-busy="true"
+        aria-label="Loading results"
       >
         <img
           src="jedi-96.png"
-          alt="Loading"
+          alt=""
+          aria-hidden="true"
           id="spinnerImage"
           style={{ width: 180, height: 180 }}
         />
