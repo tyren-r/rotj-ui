@@ -79,21 +79,17 @@
 }
 }
 
-/* no-results: align and style similar to spinner, with a gentle fade-in */
 #noResultsWrapper{
     display: grid;
     place-items: center;
     width: 100%;
-    min-height: 60vh; /* matches spinner wrapper to avoid layout shift */
+    min-height: 60vh; 
     color: var(--text-secondary, #8fb3ff);
-    /* removed fade-in animation */
 }
 
 #noResultsText{
-    font-size: 1rem; /* match spinner text size */
     letter-spacing: 0.2px;
     white-space: nowrap;
-    user-select: none;
     text-shadow:
         0 0 2px rgba(255, 255, 255, 0.75),
         0 0 8px rgba(255, 255, 255, 0.35);

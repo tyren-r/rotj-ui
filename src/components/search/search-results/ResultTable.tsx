@@ -28,7 +28,7 @@ const SearchResultsTable = () => {
     </TableContainer>
   ) : searchResults && searchResults.length === 0 ? (
     <div id="noResultsWrapper" role="status" aria-live="polite">
-      <Typography id="noResultsText" variant="body1" color="inherit">
+      <Typography id="noResultsText" variant="h5" color="inherit">
         No results found for that term
       </Typography>
     </div>
