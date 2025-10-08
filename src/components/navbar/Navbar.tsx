@@ -23,11 +23,7 @@ function ResponsiveAppBar() {
   return (
     <AppBar position="static" id="app-bar">
       <Container maxWidth={false}>
-        <Toolbar
-          disableGutters
-          component="nav"
-          aria-label="Primary navigation"
-        >
+        <Toolbar disableGutters component="nav" aria-label="Primary navigation">
           <Box
             id="inner-container"
             sx={{ display: { xs: "flex", md: "none" } }}
@@ -46,7 +42,7 @@ function ResponsiveAppBar() {
                 aria-label="Open mobile navigation menu"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                aria-expanded={Boolean(menuAnchor) ? "true" : undefined}
+                aria-expanded={menuAnchor ? "true" : undefined}
               >
                 <img src="menu-50.png" alt="" aria-hidden="true" />
               </IconButton>
@@ -93,7 +89,12 @@ function ResponsiveAppBar() {
             </div>
             <div id="pc-links">
               {pages.map((page) => (
-                <Link to={page.path} key={page.title} aria-label={page.title} className="pc-link">
+                <Link
+                  to={page.path}
+                  key={page.title}
+                  aria-label={page.title}
+                  className="pc-link"
+                >
                   <Typography>{page.title}</Typography>
                 </Link>
               ))}

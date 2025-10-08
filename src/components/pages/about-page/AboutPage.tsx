@@ -6,7 +6,12 @@ import "./about-page-styles.css";
 import aboutTextJson from "./about-page-text.json";
 
 const AboutPage: React.FC = () => (
-  <Box id="about-page-container" component="main" role="main" aria-label="About SWAPI: ROTJ">
+  <Box
+    id="about-page-container"
+    component="main"
+    role="main"
+    aria-label="About SWAPI: ROTJ"
+  >
     {aboutTextJson.map((section) => (
       <Card variant="outlined" className="about-section" key={section.title}>
         <CardContent>

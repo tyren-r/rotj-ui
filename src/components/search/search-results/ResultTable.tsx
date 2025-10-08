@@ -13,7 +13,11 @@ import Typography from "@mui/material/Typography";
 const SearchResultsTable = () => {
   const { searchResults } = useContext(SearchResultsContext);
   return searchResults && searchResults.length > 0 ? (
-    <TableContainer id="table-container" role="region" aria-label="Search results">
+    <TableContainer
+      id="table-container"
+      role="region"
+      aria-label="Search results"
+    >
       <Table aria-label="Search results table">
         <TableBody>
           {searchResults.map((resultEntry: APIResponseObject) => (
@@ -27,7 +31,12 @@ const SearchResultsTable = () => {
       </Table>
     </TableContainer>
   ) : searchResults && searchResults.length === 0 ? (
-    <div id="noResultsWrapper" role="status" aria-live="polite" aria-atomic="true">
+    <div
+      id="noResultsWrapper"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
       <Typography id="noResultsText" variant="h5" color="inherit">
         No results found for that term
       </Typography>

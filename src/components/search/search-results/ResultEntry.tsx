@@ -30,10 +30,7 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
       aria-labelledby={`result-title-${id}`}
       aria-describedby={`result-desc-${id}`}
     >
-      <CardMedia
-        className="result-entry-image"
-        image={resultEntry.image_url}
-      />
+      <CardMedia className="result-entry-image" image={resultEntry.image_url} />
       <CardContent className="result-entry-content">
         <Typography
           gutterBottom
@@ -43,11 +40,7 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
         >
           {resultEntry.name}
         </Typography>
-        <Typography
-          gutterBottom
-          variant="body2"
-          component="p"
-        >
+        <Typography gutterBottom variant="body2" component="p">
           {resultEntry.description}
         </Typography>
         <Table id="inner-table" aria-label={`Details for ${resultEntry.name}`}>
