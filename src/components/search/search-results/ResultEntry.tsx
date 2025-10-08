@@ -18,6 +18,11 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
     ...resultEntryWithoutCommonFields
   } = resultEntry;
 
+  // Treat remaining fields as a generic record to get properly typed entries
+  const resultEntryFields = Object.entries(
+    resultEntryWithoutCommonFields as Record<string, unknown>
+  );
+
   return (
     <Card variant="outlined" className="result-entry-card">
       <CardMedia className="result-entry-image" image={resultEntry.image_url} />
@@ -30,25 +35,21 @@ const ResultEntry: React.FC<ResultEntryProps> = ({ resultEntry }) => {
         </Typography>
         <Table id="inner-table">
           <TableBody>
-            {Object.entries(resultEntryWithoutCommonFields).map(
-              ([key, value], i) => (
-                // Using index as key since these keys are not unique and order won't change
-                <TableRow key={i}>
-                  <TableCell className="table-cell">
-                    <Typography variant="body2">
-                      {key.replaceAll("_", " ")}
-                    </Typography>
-                  </TableCell>
-                  <TableCell className="table-cell">
-                    <Typography variant="body2">
-                      {/* 
-// @ts-expect-error The value variable is a string, but unsure how to properly get ts to recognize TODO*/}
-                      {value}
-                    </Typography>
-                  </TableCell>
-                </TableRow>
-              ),
-            )}
+            {resultEntryFields.map(([key, value], i) => (
+              // Using index as key since these keys are not unique and order won't change
+              <TableRow key={i}>
+                <TableCell className="table-cell">
+                  <Typography variant="body2">
+                    {key.replaceAll("_", " ")}
+                  </Typography>
+                </TableCell>
+                <TableCell className="table-cell">
+                  <Typography variant="body2">
+                    {String(value)}
+                  </Typography>
+                </TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
       </CardContent>
