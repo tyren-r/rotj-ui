@@ -9,6 +9,5 @@
     margin-bottom: 20px;
     z-index: 1;
     position: relative;
-    border: 1px solid white !important;
-    color: white !important;
+    color: #FDD200 !important;
 }

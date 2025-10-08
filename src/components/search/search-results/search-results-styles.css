@@ -11,9 +11,8 @@
 }
 .result-entry-card{
     background-color:#222222 !important;
-    color:white !important;
+    color:#FFE81F !important;
     display:flex;
-    border: 1px solid white !important;
     z-index: 1;
     position: relative;
     margin-bottom: 20px;
