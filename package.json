@@ -26,7 +26,7 @@
     "serve": "vite preview --config ./config/vite.config.ts",
     "lint": "eslint --config ./config/eslint.config.ts .",
     "lint:fix": "eslint --config ./config/eslint.config.ts --fix .",
-    "cy:open": "cypress open -config-file ./config/cypress.config.ts"
+    "cy:open": "cypress open --config-file ./config/cypress.config.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
@@ -34,7 +34,7 @@
     "@types/react-dom": "^19.1.7",
     "@types/swagger-ui-react": "^5.18.0",
     "@vitejs/plugin-react": "^5.0.0",
-    "cypress": "^15.2.0",
+    "cypress": "^15.4.0",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.3",
