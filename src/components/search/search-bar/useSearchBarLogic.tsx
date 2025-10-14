@@ -10,9 +10,9 @@ function useSearchBarLogic() {
   const createDynamicURL = () => {
     let dynamicURL = "";
     if (searchTerm) {
-      dynamicURL = `http://localhost:8000/${searchType}/${searchTerm}`;
+      dynamicURL = `https://api.starwarsapi.com/${searchType}/${searchTerm}`;
     } else {
-      dynamicURL = `http://localhost:8000/${searchType}`;
+      dynamicURL = `https://api.starwarsapi.com/${searchType}`;
     }
     return dynamicURL;
   };

@@ -18,7 +18,7 @@ const DocumentationPage: React.FC = () => {
 
   return (
     <Box role="main" aria-label="API documentation">
-      <SwaggerUI url="http://localhost:8000/openapi.json" />
+      <SwaggerUI url="https://api.starwarsapi.com/openapi.json" />
     </Box>
   );
 };
