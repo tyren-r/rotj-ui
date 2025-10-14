@@ -9,7 +9,7 @@
   },
   {
     "title": "Why I built another SWAPI app",
-    "paragraph": "A long time ago, in a galaxy pretty much the same as this one... I was given a take home assignment for a job interview. The task was to create a front-end for the original SWAPI.co. Over the years, I made small updates to that front-end as a portfolio project, migrating to the newer swapi.tech . During the use of these APIS, I was always plagued by questions such as \"Why are they returning primary key urls instead of names for related entities?\", \"Why haven't images been added, or any other data?\", \"Why are all fields strings?\", etc. I'm sure these questions have good answers, but I wanted to create my own swapi as a new answer to these questions."
+    "paragraph": "A long time ago, in a galaxy pretty much the same as this one... I was given a take home assignment for a job interview. The task was to create a front-end for the original SWAPI.co. Over the years, I made small updates to that front-end as a portfolio project, migrating to the newer swapi.tech. I always wanted to see human readable responses, images, etc. I also wanted to learn new technologies and improve my skills. So, I decided to build my own version of the API and front-end from scratch."
   },
   {
     "title": "What about swapi.tech?",
