@@ -12,7 +12,7 @@ function useSearchBarLogic() {
     if (searchTerm) {
       dynamicURL = `https://api.starwarsapi.com/${searchType}/${searchTerm}`;
     } else {
-      dynamicURL = `https://api.starwarsapi.com/${searchType}`;
+      dynamicURL = `https://api.starwarsapi.com/${searchType}/`;
     }
     return dynamicURL;
   };
