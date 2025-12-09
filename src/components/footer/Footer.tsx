@@ -19,7 +19,7 @@ const Footer = () => {
             LinkedIn
           </Link>
           <Link
-            href="https://github.com/"
+            href="https://github.com/tyren-r"
             underline="hover"
             target="_blank"
             rel="noopener noreferrer"
