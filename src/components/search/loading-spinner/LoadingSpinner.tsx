@@ -2,10 +2,15 @@ import React, { useContext } from "react";
 import "./loading-spinner.css";
 import SearchResultsContext from "../../../SearchResultsContext";
 import Typography from "@mui/material/Typography";
+import type { LoadingSpinnerProps } from "../../../../types";
 
-const LoadingSpinner: React.FC = () => {
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  forceVisible = false,
+}) => {
   const { isLoading } = useContext(SearchResultsContext);
-  if (!isLoading) return null;
+  const shouldShow = forceVisible || isLoading;
+
+  if (!shouldShow) return null;
 
   return (
     <div id="loadingSpinnerWrapper">
@@ -14,7 +19,7 @@ const LoadingSpinner: React.FC = () => {
         role="status"
         aria-live="polite"
         aria-busy="true"
-        aria-label="Loading results"
+        aria-label="Loading content"
       >
         <img
           src="jedi-96.png"
