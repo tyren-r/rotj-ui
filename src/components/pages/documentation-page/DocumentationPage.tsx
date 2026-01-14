@@ -1,24 +1,19 @@
-import SwaggerUI from "swagger-ui-react";
-import "swagger-ui-react/swagger-ui.css";
 import "./documentation-page-styles.css";
 import Box from "@mui/material/Box";
-import { useEffect } from "react";
+import { useDocumentationPageLogic } from "./useDocumentationPageLogic";
 
 const DocumentationPage: React.FC = () => {
-  useEffect(() => {
-    document.title = "API Documentation | SWAPI: ROTJ";
-    const meta = document.querySelector('meta[name="description"]');
-    meta?.setAttribute(
-      "content",
-      "Interactive OpenAPI documentation for SWAPI: Return of the Jedi.",
-    );
-    const canonical = document.querySelector('link[rel="canonical"]');
-    canonical?.setAttribute("href", `${window.location.origin}/docs`);
-  }, []);
+  const { loadError } = useDocumentationPageLogic();
 
   return (
     <Box role="main" aria-label="API documentation">
-      <SwaggerUI url="https://api.starwarsapi.com/openapi.json" />
+      {loadError ? (
+        <div role="alert" className="swagger-error">
+          {loadError}
+        </div>
+      ) : (
+        <div id="swagger-container" className="swagger-ui" aria-live="polite" />
+      )}
     </Box>
   );
 };

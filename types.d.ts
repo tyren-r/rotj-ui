@@ -18,6 +18,10 @@ export interface APIResponseObject {
   image_url: string;
 }
 
+export interface LoadingSpinnerProps {
+  forceVisible?: boolean;
+}
+
 export interface ResultEntryProps {
   resultEntry: APIResponseObject;
 }

@@ -46,3 +46,8 @@
   fill: #61affe !important;
   stroke: #61affe !important;
 }
+
+.swagger-error {
+  color: white;
+  padding: 1rem;
+}
