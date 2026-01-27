@@ -6,13 +6,14 @@ function useSearchBarLogic() {
   const [searchTerm, setSearchTerm] = useState<string>();
   const [searchType, setSearchType] = useState("characters");
   const { setSearchResults, setIsLoading } = useContext(SearchResultsContext);
+  const baseUrl = import.meta.env.VITE_API_BASE_URL
 
   const createDynamicURL = () => {
     let dynamicURL = "";
     if (searchTerm) {
-      dynamicURL = `https://api.starwarsapi.com/${searchType}/${searchTerm}`;
+      dynamicURL = `${baseUrl}/${searchType}/${searchTerm}`;
     } else {
-      dynamicURL = `https://api.starwarsapi.com/${searchType}/`;
+      dynamicURL = `${baseUrl}/${searchType}/`;
     }
     return dynamicURL;
   };

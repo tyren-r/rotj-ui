@@ -7,6 +7,9 @@ const SWAGGER_UI_CSS_CDN =
 
 type SwaggerUIBundle = (config: { url: string; dom_id: string }) => unknown;
 
+const docsOpenApiUrl =
+  import.meta.env.VITE_DOCS_OPENAPI_URL;
+
 declare global {
   interface Window {
     SwaggerUIBundle?: SwaggerUIBundle;
@@ -43,7 +46,7 @@ export function useDocumentationPageLogic() {
       if (cancelled) return;
       if (window.SwaggerUIBundle) {
         window.SwaggerUIBundle({
-          url: "http://127.0.0.1:8000/openapi.json",
+          url: docsOpenApiUrl,
           dom_id: "#swagger-container",
         });
       } else {
