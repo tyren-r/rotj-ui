@@ -7,6 +7,8 @@ import Menu from "@mui/material/Menu";
 import { Link } from "react-router";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
+import jedi64 from "../../icons/jedi-64.png";
+import menu50 from "../../icons/menu-50.png";
 
 import useNavBarLogic from "./useNavBarLogic";
 import "./navbar-styles.css";
@@ -30,7 +32,7 @@ function ResponsiveAppBar() {
           >
             <div>
               <Link to="/" aria-label="Home">
-                <img src="jedi-64.png" alt="Jedi Logo Image" />
+                <img src={jedi64} alt="Jedi Logo Image" />
               </Link>
             </div>
 
@@ -44,7 +46,7 @@ function ResponsiveAppBar() {
                 aria-haspopup="true"
                 aria-expanded={menuAnchor ? "true" : undefined}
               >
-                <img src="menu-50.png" alt="" aria-hidden="true" />
+                <img src={menu50} alt="" aria-hidden="true" />
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -84,7 +86,7 @@ function ResponsiveAppBar() {
           >
             <div id="icon">
               <Link to="/" aria-label="Home">
-                <img src="jedi-64.png" alt="" aria-hidden="true" />
+                <img src={jedi64} alt="" aria-hidden="true" />
               </Link>
             </div>
             <div id="pc-links">
