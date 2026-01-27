@@ -3,6 +3,7 @@ import "./loading-spinner.css";
 import SearchResultsContext from "../../../SearchResultsContext";
 import Typography from "@mui/material/Typography";
 import type { LoadingSpinnerProps } from "../../../../types";
+import jedi96 from "../../../icons/jedi-96.png";
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   forceVisible = false,
@@ -22,7 +23,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         aria-label="Loading content"
       >
         <img
-          src="jedi-96.png"
+          src={jedi96}
           alt=""
           aria-hidden="true"
           id="spinnerImage"
