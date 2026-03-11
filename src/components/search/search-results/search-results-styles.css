@@ -5,7 +5,8 @@
 
 #table-container{
     margin-top: 5vh;
-    width:100vw;
+    width:100%;
+    max-width: 100vw;
     overflow-y: scroll;
     height:65vh;
 }
@@ -15,7 +16,7 @@
     display:flex;
     z-index: 1;
     position: relative;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
     justify-self: center;
 }
 .result-entry-content{
@@ -23,6 +24,7 @@
 }
 .table-row{
     border:none !important;
+    padding: 0 !important;
 }
 /* mobile */
 @media screen and (max-width: 500px) {
