@@ -34,7 +34,7 @@ npm install
 npm run start
 ```
 
-Visit http://localhost:5173.
+Visit http://localhost:3000.
 
 ## Production Build and Preview
 ```bash
