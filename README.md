@@ -14,13 +14,21 @@ A Vite + React + TypeScript front end that wraps the SWAPI: ROTJ data in a human
 - Docker (optional) if you prefer containerized builds.
 
 ## Local Development
-1) Install dependencies:
+1) Create a local env file (Vite will load `.env`):
+
+```bash
+cp example-env.txt .env
+```
+
+`example-env.txt` contains the default API endpoints (`VITE_API_BASE_URL` and `VITE_DOCS_OPENAPI_URL`); tweak them in your local `.env` if you need to point at a different backend.
+
+2) Install dependencies:
 
 ```bash
 npm install
 ```
 
-2) Start the dev server (Vite):
+3) Start the dev server (Vite):
 
 ```bash
 npm run start
